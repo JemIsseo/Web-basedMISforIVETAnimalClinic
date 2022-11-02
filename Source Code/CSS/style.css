@@ -23,7 +23,7 @@ main {
 }
 /*  Text Properties   */
 .input-box {
-    margin: 5.5em auto;
+    margin: 3em auto;
     width: 50%;
     border-bottom: 5px solid #6cdbeb;
 }
@@ -72,9 +72,18 @@ main {
     background: #f2dede;
     color: #a94442;
     padding: 10px;
-    width: 95%;
+    margin: 1em auto;
+    width: 60%;
     border-radius: 5px;
+    text-align: center;
 }
+
+.error:hover {
+    background-color: transparent;
+    color: transparent;
+    transition: 100ms;
+}
+
 
 .glassloginform{
     margin-top: 2em;

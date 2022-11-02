@@ -24,14 +24,19 @@
     <main>
         <section class = "glassloginform">
             <h2 class="logintext">User Login</h2>
+    
+                <?php if (isset($_GET['error'])) {?>
+                    <p class="error"><?php  echo $_GET['error'] ?></p>
+                <?php } ?> 
+    
             <form action="dashboard.php" method="POST">
                 <div class="input-box">
                     <i class="fa-sharp fa-solid fa-user"></i>
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="username" placeholder="Username"required>
                 </div>
                 <div class="input-box">
                     <i class="fa-sharp fa-solid fa-lock"></i>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                     <button name="login" type="submit" class="login-btn">Login</button>
             </form>
