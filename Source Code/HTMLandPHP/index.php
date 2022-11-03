@@ -32,11 +32,13 @@
             <form action="dashboard.php" method="POST">
                 <div class="input-box">
                     <i class="fa-sharp fa-solid fa-user"></i>
-                    <input type="text" name="username" placeholder="Username"required>
+                    <input type="text" name="username" required>
+                    <span>Username</span>
                 </div>
                 <div class="input-box">
                     <i class="fa-sharp fa-solid fa-lock"></i>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" required>
+                    <span>Password</span>
                 </div>
                     <button name="login" type="submit" class="login-btn">Login</button>
             </form>

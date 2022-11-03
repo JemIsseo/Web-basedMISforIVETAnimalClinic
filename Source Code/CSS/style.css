@@ -11,41 +11,63 @@ main {
     align-items: center;
     justify-content: center;
 }
-/*  Glass Login Form  */
 
+/*  Glass Login Form  */
 .logintext {
     text-align: center;
-    padding-top: 15%;
+    padding-top: 13%;
     font-family: 'Questrial', sans-serif;
     font-size: 30px;
     color:#30b69d;
     letter-spacing: .1em;
 }
 /*  Text Properties   */
-.input-box {
-    margin: 3em auto;
-    margin-left: 9em;
-    width: 45%;
-    border-bottom: 5px solid #6cdbeb;
+.input-box span {
+    position: relative;
 }
 
 .input-box input {
-    width: 95%;
-    border: none;
+    width: 45%;
+    padding: 10px;
+    border: 1px solid rgba(11, 90, 136, 0.3);
+    background: #dcebfa;
+    border-radius: 15px;
     outline: none;
-    background: transparent;
-    font-size: large;
+    color: #30b69d;
+    font-size: 1em;
+    margin-left: 23%;
+    margin-top: 45px;
 }
 
-::placeholder {
+.input-box span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    padding-left: 3.5em;
+    pointer-events: none;
+    font-size: 1em;
+    color: #58aa9b;
+    margin-left: 28%;
+    margin-top: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: poppins, sans-serif;
+    letter-spacing: .05em;
+}
+
+.input-box input:valid ~ span, 
+.input-box input:focus ~ span {
     color: #30b69d;
-    letter-spacing: .1em;
+    transform: translateX(15px) translateY(-28px);
+    font-size: 0.77em;
+    padding: 10px;
+    transition: 99ms;
 }
 
 .fa-solid {
     font-size: 25px;
     color: #30b69d;
-    position: absolute;
+    position: relative;
     left: 23%;
 }
 
@@ -60,7 +82,7 @@ main {
     background: transparent;
     position: absolute;
     bottom: 20%;
-    left: 30%;
+    left: 27%;
 }
 
 .login-btn:hover {
@@ -84,7 +106,6 @@ main {
     color: transparent;
     transition: 100ms;
 }
-
 
 .glassloginform{
     margin-top: 2em;
