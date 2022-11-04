@@ -31,12 +31,12 @@ main {
     padding: 10px;
     border: 1px solid rgba(11, 90, 136, 0.3);
     background: #dcebfa;
-    border-radius: 15px;
+    border-radius: 12px;
     outline: none;
-    color: #30b69d;
+    color: #35776c;
     font-size: 1em;
     margin-left: 23%;
-    margin-top: 45px;
+    margin-top: 50px;
 }
 
 .input-box span {
@@ -46,9 +46,9 @@ main {
     padding-left: 3.5em;
     pointer-events: none;
     font-size: 1em;
-    color: #58aa9b;
+    color: #5c817a;
     margin-left: 28%;
-    margin-top: 45px;
+    margin-top: 50px;
     text-transform: uppercase;
     font-weight: 700;
     font-family: poppins, sans-serif;
@@ -58,17 +58,21 @@ main {
 .input-box input:valid ~ span, 
 .input-box input:focus ~ span {
     color: #30b69d;
-    transform: translateX(15px) translateY(-28px);
-    font-size: 0.77em;
-    padding: 10px;
+    transform: translateX(15px) translateY(-10px);
+    font-size: 0.73em;
+    padding: 2px 3px;
+    padding-bottom: 0;
     transition: 99ms;
+    border-left: 2px solid  rgba(11, 90, 136, 0.3);
+    border-right: 2px solid  rgba(11, 90, 136, 0.3);
+    background: #ACF7E1;
 }
 
 .fa-solid {
     font-size: 25px;
     color: #30b69d;
     position: relative;
-    left: 23%;
+    left: 22%;
 }
 
 .login-btn {
@@ -95,7 +99,8 @@ main {
     background: #f2dede;
     color: #a94442;
     padding: 10px;
-    margin: 1em auto;
+    margin: 0 auto;
+    margin-top: 1em;
     width: 60%;
     border-radius: 5px;
     text-align: center;
@@ -109,25 +114,23 @@ main {
 
 .glassloginform{
     margin-top: 2em;
-    background: white;
     min-height: 80vh;
     width: 35%;
     background: linear-gradient(to right bottom, 
-    rgba(255, 255, 255, 0.7), 
-    rgba(255, 255, 255, 0.1)
+    rgba(255, 255, 255, 0.5), 
+    rgba(255, 255, 255, 0.2)
     );
     border-radius: 2rem;
     z-index: 2;
-    backdrop-filter: blur(2rem); 
+    backdrop-filter: blur(1rem); 
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
 .circle1, 
 .circle2 {
-    background: white;
-    background: linear-gradient(to right bottom, 
-    rgba(255, 255, 255, 0.8), 
-    rgba(255, 255, 255, 0.3)
+    background: linear-gradient(to right bottom,  
+    rgba(171, 217, 238, 0.3),
+    rgba(209, 250, 250, 0.9)
     );
     height: 15rem;
     width: 15rem;
@@ -137,19 +140,20 @@ main {
 }
 
 .circle1 {
-    top: 5%;
+    top: 4%;
     right: 21%;
 }
 
 .circle2 {
-    bottom: 1%;
+    bottom: 4%;
     left: 21%;
 }
 
-.circle3, .circle4 {
-    background: white;
+.circle3, 
+.circle4,
+.circle6 {
     background: linear-gradient(to right bottom, 
-    rgba(255, 255, 255, 0.9), 
+    rgba(157, 237, 243, 0.9), rgba(229, 246, 248, 0.9),
     rgba(255, 255, 255, 0.1)
     );
     height: 10rem;
@@ -159,15 +163,36 @@ main {
 }
 
 .circle3 {
-    top: 13%;
-    left: 8%;
+    top: 7%;
+    left: 13%;
 }
 
 .circle4 {
-    bottom: 13%;
-    right: 8%;
+    bottom: 7%;
+    right: 13%;
 }
 
+.circle6 {
+    bottom: 60%;
+    right: 2%;
+
+}
+
+.circle5 {
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.9), rgba(201, 237, 253, 0.9), 
+    rgba(255, 255, 255, 0.1)
+    );
+    height: 23rem;
+    width: 23rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle5 {
+    top: 38%;
+    left: -15%;
+}
 
 
 

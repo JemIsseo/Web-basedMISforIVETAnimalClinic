@@ -96,7 +96,71 @@
         </aside>
         <!--  Main Tag  -->
         <main>
+            <h1>Dashboard</h1>
 
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-symbols-sharp">analytics</span>
+                         <div class="middle">
+                            <div class="left">
+                                <h3>Total Sales</h3>
+                                <h1>₱435,000</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx='38' cy='38' r='36' ></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>79%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 30 Days</small>
+                </div>
+                <!--  End of Sales  -->
+                <div class="stock">
+                    <span class="material-symbols-sharp">storage</span>
+                         <div class="middle">
+                            <div class="left">
+                                <h3>Total Stocks</h3>
+                                <h1>10,000</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx='38' cy='38' r='36' ></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>95%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 30 Days</small>
+                </div>
+                <!--  End of Stock  -->
+                <div class="reservation">
+                    <span class="material-symbols-sharp">snippet_folder</span>
+                         <div class="middle">
+                            <div class="left">
+                                <h3>Total Reservations</h3>
+                                <h1>300</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx='38' cy='38' r='36' ></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>69%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 30 Days</small>
+                </div>
+                <!--  End of Reservation  -->
+            </div>
         </main>
     </div>
 </body>
