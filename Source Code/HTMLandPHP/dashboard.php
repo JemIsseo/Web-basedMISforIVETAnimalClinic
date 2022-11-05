@@ -161,6 +161,12 @@
                 </div>
                 <!--  End of Reservation  -->
             </div>
+            <section class="recenttrans">
+                <h1>Recent Transaction</h1>
+                <div class="listoftrans">
+
+                </div>
+            </section>
         </main>
     </div>
 </body>

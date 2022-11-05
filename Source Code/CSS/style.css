@@ -60,7 +60,7 @@ main {
     color: #30b69d;
     transform: translateX(15px) translateY(-10px);
     font-size: 0.73em;
-    padding: 2px 3px;
+    padding: 0 5px;
     padding-bottom: 0;
     transition: 99ms;
     border-left: 2px solid  rgba(11, 90, 136, 0.3);
@@ -112,7 +112,7 @@ main {
     transition: 100ms;
 }
 
-.glassloginform{
+.glassloginform {
     margin-top: 2em;
     min-height: 80vh;
     width: 35%;
