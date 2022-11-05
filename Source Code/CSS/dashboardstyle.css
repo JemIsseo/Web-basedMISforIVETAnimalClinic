@@ -26,6 +26,10 @@
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
 
+    --fs-text1: 1.4rem;
+    --fs-text2: 1rem;
+    --fs-text3: .80rem;
+
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 /* General Properties */
@@ -305,3 +309,25 @@ main .insights .number {
 
 
 /*  Section Transaction  */
+.recenttrans {
+    margin-top: 1em;
+}
+
+.listoftrans {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    height: 35vh;
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.listoftrans:hover {
+    box-shadow: none;
+}
+
+/*  Table Transaction  */
+table {
+    padding: var(--fs-text1);
+}

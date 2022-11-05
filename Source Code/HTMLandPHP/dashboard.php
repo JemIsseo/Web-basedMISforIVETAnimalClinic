@@ -40,7 +40,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Stylesheet  -->
     <link rel="stylesheet" href="../CSS/dashboardstyle.css">
-
 </head>
 <body>
     <div class="container">
@@ -162,9 +161,39 @@
                 <!--  End of Reservation  -->
             </div>
             <section class="recenttrans">
-                <h1>Recent Transaction</h1>
+                <h1>Recent Transactions</h1>
                 <div class="listoftrans">
-
+                    <div class="tabletransact">
+                    <table class="table">
+                        <thead>
+                           <tr>
+                             <th scope="col">Transaction No.</th>
+                             <th scope="col">Product Name</th>
+                             <th scope="col">Quantity</th>
+                             <th scope="col">Date</th>
+                           </tr>
+                        </thead>
+                          <tbody class="table-group-divider">
+                           <tr>
+                             <th scope="row">1</th>
+                             <td>Mark</td>
+                             <td>Otto</td>
+                             <td>@mdo</td>
+                           </tr>
+                           <tr>
+                             <th scope="row">2</th>
+                             <td>Jacob</td>
+                             <td>Thornton</td>
+                             <td>@fat</td>
+                           </tr>
+                           <tr>
+                             <th scope="row">3</th>
+                             <td colspan="2">Larry the Bird</td>
+                             <td>@twitter</td>
+                           </tr>
+                          </tbody>
+                    </table>
+                    </div>
                 </div>
             </section>
         </main>

@@ -1,3 +1,11 @@
+:root {
+    --fs-text1: 1.4rem;
+    --fs-text2: 1rem;
+    --fs-text3: .80rem;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +28,12 @@ main {
     font-size: 30px;
     color:#30b69d;
     letter-spacing: .1em;
+}
+
+@media screen and (max-width: 600px) {
+    .logintext {
+        font-size: var(--fs-text1);
+    }
 }
 /*  Text Properties   */
 .input-box span {
@@ -53,6 +67,12 @@ main {
     font-weight: 700;
     font-family: poppins, sans-serif;
     letter-spacing: .05em;
+}
+
+@media screen and (max-width: 700px) {
+    .input-box span {
+        font-size: var(--fs-text3);
+    }
 }
 
 .input-box input:valid ~ span, 
@@ -126,6 +146,12 @@ main {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 900px) and (max-width: 700px){
+    .glassloginform {
+        width: 66%;
+    }
+}
+
 .circle1, 
 .circle2 {
     background: linear-gradient(to right bottom,  
@@ -148,6 +174,25 @@ main {
     bottom: 4%;
     left: 21%;
 }
+
+@media screen and (max-width: 700px) {
+    .circle1,
+    .circle2 {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .circle1 {
+        top: 2%;
+        right: 10%;
+    }
+
+    .circle2 {
+        bottom: 2%;
+        left: 3%;
+    }
+}
+
 
 .circle3, 
 .circle4,
@@ -194,7 +239,18 @@ main {
     left: -15%;
 }
 
+@media screen and (max-width: 700px) {
+    .circle4,
+    .circle5 {
+        display: none;
+    }
 
+    .circle6 {
+        bottom: 20%;
+    }
 
-
-
+    .circle3 {
+        top: 17%;
+        left: 2%;
+    }
+}
