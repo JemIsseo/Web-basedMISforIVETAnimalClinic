@@ -164,39 +164,47 @@
                 <h1>Recent Transactions</h1>
                 <div class="listoftrans">
                     <div class="tabletransact">
-                    <table class="table">
-                        <thead>
-                           <tr>
-                             <th scope="col">Transaction No.</th>
-                             <th scope="col">Product Name</th>
-                             <th scope="col">Quantity</th>
-                             <th scope="col">Date</th>
-                           </tr>
-                        </thead>
-                          <tbody class="table-group-divider">
-                           <tr>
-                             <th scope="row">1</th>
-                             <td>Mark</td>
-                             <td>Otto</td>
-                             <td>@mdo</td>
-                           </tr>
-                           <tr>
-                             <th scope="row">2</th>
-                             <td>Jacob</td>
-                             <td>Thornton</td>
-                             <td>@fat</td>
-                           </tr>
-                           <tr>
-                             <th scope="row">3</th>
-                             <td colspan="2">Larry the Bird</td>
-                             <td>@twitter</td>
-                           </tr>
-                          </tbody>
-                    </table>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction No.</th>
+                                    <th>Item Name</th>
+                                    <th>Quantity</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dog Soap</td>
+                                    <td>764</td>
+                                    <td>12/01/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Immunol Vitamin</td>
+                                    <td>482</td>
+                                    <td>12/03/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Pedigree</td>
+                                    <td>332</td>
+                                    <td>12/04/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Antibiotic</td>
+                                    <td>275</td>
+                                    <td>12/07/2022</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
         </main>
+        
     </div>
 </body>
 </html>

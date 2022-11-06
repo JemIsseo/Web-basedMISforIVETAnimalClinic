@@ -23,7 +23,6 @@ main {
 /*  Glass Login Form  */
 .logintext {
     text-align: center;
-    padding-top: 13%;
     font-family: 'Questrial', sans-serif;
     font-size: 30px;
     color:#30b69d;
@@ -50,7 +49,7 @@ main {
     color: #35776c;
     font-size: 1em;
     margin-left: 23%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .input-box span {
@@ -62,7 +61,7 @@ main {
     font-size: 1em;
     color: #5c817a;
     margin-left: 28%;
-    margin-top: 50px;
+    margin-top: 32px;
     text-transform: uppercase;
     font-weight: 700;
     font-family: poppins, sans-serif;
@@ -105,7 +104,7 @@ main {
     font-size: .95em;
     background: transparent;
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 27%;
 }
 
@@ -118,7 +117,7 @@ main {
 .error {
     background: #f2dede;
     color: #a94442;
-    padding: 10px;
+    padding: 5px;
     margin: 0 auto;
     margin-top: 1em;
     width: 60%;
@@ -146,9 +145,20 @@ main {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
+.glassloginform img {
+    height: 100px;
+    width: 100px;
+    margin: 0 11.5em;
+    margin-top: 2em;
+}
+
 @media screen and (max-width: 900px) and (max-width: 700px){
     .glassloginform {
         width: 66%;
+    }
+
+    .glassloginform img {
+        margin: 1em 7em;
     }
 }
 
