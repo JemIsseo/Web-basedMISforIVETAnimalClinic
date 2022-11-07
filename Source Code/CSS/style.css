@@ -4,8 +4,6 @@
     --fs-text3: .80rem;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -29,11 +27,6 @@ main {
     letter-spacing: .1em;
 }
 
-@media screen and (max-width: 600px) {
-    .logintext {
-        font-size: var(--fs-text1);
-    }
-}
 /*  Text Properties   */
 .input-box span {
     position: relative;
@@ -68,12 +61,6 @@ main {
     letter-spacing: .05em;
 }
 
-@media screen and (max-width: 700px) {
-    .input-box span {
-        font-size: var(--fs-text3);
-    }
-}
-
 .input-box input:valid ~ span, 
 .input-box input:focus ~ span {
     color: #30b69d;
@@ -104,8 +91,7 @@ main {
     font-size: .95em;
     background: transparent;
     position: absolute;
-    bottom: 15%;
-    left: 27%;
+    margin: 2em 8.5em;
 }
 
 .login-btn:hover {
@@ -152,16 +138,6 @@ main {
     margin-top: 2em;
 }
 
-@media screen and (max-width: 900px) and (max-width: 700px){
-    .glassloginform {
-        width: 66%;
-    }
-
-    .glassloginform img {
-        margin: 1em 7em;
-    }
-}
-
 .circle1, 
 .circle2 {
     background: linear-gradient(to right bottom,  
@@ -184,25 +160,6 @@ main {
     bottom: 4%;
     left: 21%;
 }
-
-@media screen and (max-width: 700px) {
-    .circle1,
-    .circle2 {
-        height: 10rem;
-        width: 10rem;
-    }
-
-    .circle1 {
-        top: 2%;
-        right: 10%;
-    }
-
-    .circle2 {
-        bottom: 2%;
-        left: 3%;
-    }
-}
-
 
 .circle3, 
 .circle4,
@@ -248,8 +205,59 @@ main {
     top: 38%;
     left: -15%;
 }
+/*  MEDIA QUERIES  */
+@media screen and (max-width: 600px) {
+    .logintext {
+        font-size: var(--fs-text1);
+    }
+    .login-btn {
+        margin: 1em 6em;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+    .glassloginform {
+        width: 50%;
+    }
+
+    .glassloginform img {
+        margin: 1em 10em;
+    }
+
+    .login-btn {
+        margin: 1em 8em;
+    }
+}
 
 @media screen and (max-width: 700px) {
+    .glassloginform {
+        width: 66%;
+    }
+
+    .glassloginform img {
+        margin: 1em 7em;
+    }
+
+    .input-box span {
+        font-size: var(--fs-text3);
+    }
+    
+    .circle1,
+    .circle2 {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .circle1 {
+        top: 2%;
+        right: 10%;
+    }
+
+    .circle2 {
+        bottom: 2%;
+        left: 3%;
+    }
+   
     .circle4,
     .circle5 {
         display: none;

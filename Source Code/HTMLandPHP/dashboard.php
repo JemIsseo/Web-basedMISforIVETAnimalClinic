@@ -29,6 +29,7 @@
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +78,7 @@
                 </a>
                 <a href="#">
                     <span class="material-symbols-sharp">medical_information</span>
-                    <h3>Services and Reservation</h3>
+                    <h3>Products and Services</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-sharp">report</span>
@@ -204,7 +205,84 @@
                 </div>
             </section>
         </main>
-        
+
+        <!--  End of Main Tag  -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Welcome,  <b>Kim</b></p>
+                        <small class="text-muted">Administrator</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../Images/profile-1.jpg" alt="User Photo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of top -->
+            <div class="date-today">
+                <div class="rectangle-border"></div>
+                <div class="datetoday">
+                <span class="material-symbols-sharp">event</span>
+                       <?php  echo "<br>Today is " . 
+                       date("M d, Y \n l, ") . 
+                       "<br>Have a great day! :)"   ?>
+                </div>
+            </div>
+
+            <!--  End of Date  -->
+            <div class="schedule">
+                <h2>Schedule Reservations</h2>
+                <div class="schedinfo">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Owner's Name</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Kristina Salinga</td>
+                                    <td>11/24/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Brill Egualada</td>
+                                    <td>11/07/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Jeremy Liberty</td>
+                                    <td>12/15/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Vann Oliveros</td>
+                                    <td>12/23/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Roahn Vallega</td>
+                                    <td>12/29/2022</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
+
