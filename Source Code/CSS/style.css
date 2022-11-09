@@ -131,10 +131,12 @@ main {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
-.glassloginform img {
+.center {
     height: 100px;
     width: 100px;
-    margin: 0 11.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 2em;
 }
 
@@ -220,10 +222,6 @@ main {
         width: 50%;
     }
 
-    .glassloginform img {
-        margin: 1em 10em;
-    }
-
     .login-btn {
         margin: 1em 8em;
     }
@@ -232,10 +230,6 @@ main {
 @media screen and (max-width: 700px) {
     .glassloginform {
         width: 66%;
-    }
-
-    .glassloginform img {
-        margin: 1em 7em;
     }
 
     .input-box span {

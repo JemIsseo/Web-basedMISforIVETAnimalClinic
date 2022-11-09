@@ -16,7 +16,7 @@
         <!-- Login Form Section -->
     <main>
         <section class = "glassloginform">
-            <img src="../Images/petcare.png" alt="Login Portal Logo">
+            <img src="../Images/petcare.png" alt="Login Portal Logo" class="center">
             <h2 class="logintext">User Login</h2>
     
                 <?php if (isset($_GET['error'])) {?>

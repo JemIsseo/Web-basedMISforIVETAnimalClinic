@@ -47,7 +47,7 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="../Images/ivet.png" alt="IVET Logo">
+                   <a href="#"><img src="../Images/ivet.png" alt="IVET Logo"></a>
                     <h2><span class="primary-variant">ANIMAL</span><span class="warning"> CLINIC</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -97,10 +97,6 @@
         <!--  Main Tag  -->
         <main>
             <h1>Dashboard</h1>
-
-            <div class="date">
-                <input type="date">
-            </div>
 
             <div class="insights">
                 <div class="sales">
@@ -178,26 +174,32 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Dog Soap</td>
-                                    <td>764</td>
+                                    <td>4</td>
                                     <td>12/01/2022</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Immunol Vitamin</td>
-                                    <td>482</td>
+                                    <td>1</td>
                                     <td>12/03/2022</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Pedigree</td>
-                                    <td>332</td>
+                                    <td>3</td>
                                     <td>12/04/2022</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Antibiotic</td>
-                                    <td>275</td>
+                                    <td>5</td>
                                     <td>12/07/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Beef Jerky Food</td>
+                                    <td>10</td>
+                                    <td>12/10/2022</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -283,6 +285,8 @@
         </div>
 
     </div>
+
+    <script src="../JS/script.js"></script>
 </body>
 </html>
 
