@@ -60,11 +60,11 @@
                     <span class="material-symbols-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="useraccount.php">
                     <span class="material-symbols-sharp">person</span>
                     <h3>User Account</h3>
                 </a>
-                <a href="#" class="active">
+                <a href="profile.php" class="active">
                     <span class="material-symbols-sharp">pets</span>
                     <h3>Profile</h3>
                 </a>
@@ -79,6 +79,10 @@
                 <a href="#">
                     <span class="material-symbols-sharp">medical_information</span>
                     <h3>Products and Services</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">find_in_page</span>
+                    <h3>Audit Trail</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-sharp">report</span>
@@ -216,7 +220,7 @@
                 </button>
                 <div class="theme-toggler">
                     <span class="material-symbols-sharp">light_mode</span>
-                    <span class="material-symbols-sharp">dark_mode</span>
+                    <span class="material-symbols-sharp d">dark_mode</span>
                 </div>
                 <div class="profile">
                     <div class="info">

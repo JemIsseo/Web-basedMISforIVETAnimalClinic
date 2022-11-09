@@ -42,7 +42,6 @@
 }
 
 
-
 /* General Properties */
 * {
     margin: 0;
@@ -151,6 +150,7 @@ b {
 
 aside {
     height: 100vh;
+    position: block;
 }
 
 aside .top {
@@ -175,7 +175,6 @@ aside .close {
     display: none;
 }
 
-
 /*=====  Sidebar Section  =====*/
 aside .sidebar {
     display: flex;
@@ -183,7 +182,7 @@ aside .sidebar {
     width: 16vw;
     height: 86vh;
     position: relative;
-    top: 3rem;
+    top: 1.5rem;
 }
 
 aside h3 {
@@ -192,8 +191,8 @@ aside h3 {
 
 aside .sidebar a {
     display: flex;
-    color: var(--color-info-dark);
-    margin-left: 1rem;
+    color: var(--color-dark);
+    margin-left: .1rem;
     gap: 1rem;
     align-items: center;
     position: relative;
@@ -203,35 +202,19 @@ aside .sidebar a {
 
 aside .sidebar a span {
     font-size: 1.6rem;
-    transition: all 300ms ease;
+    transition: all 200ms ease;
 }
 
 aside .sidebar a:last-child {
     position: absolute;
-    bottom: 3.5rem;
+    bottom: 1.5rem;
     width: 100%;
 }
 
-aside .sidebar a.active {
-    background: var(--color-light);
-    color: var(--color-primary);
-    margin-left: -8%;
-}
-
-aside .sidebar a.active::before {
-    content: '';
-    width: 6px;
-    height: 100%;
-    background: var(--color-primary);
-}
-
-aside .sidebar a.active span {
-    color: var(--color-primary);
-    margin-left: calc(1rem - 3px);
-} 
-
 aside .sidebar a:hover {
     color: var(--color-primary);
+    background: var(--color-info-light);
+    border-left: 5px solid var(--color-primary);
 }
 
 aside .sidebar a:hover span {
@@ -401,7 +384,7 @@ main .insights .number {
     justify-content: center;
 }
 
-.right .theme-toggler span.active {
+.right .theme-toggler .d.active {
     background: var(--color-primary);
     color: rgb(255, 255, 255);
     border-radius: var(--border-radius-2);
@@ -415,6 +398,11 @@ main .insights .number {
 
 .right .top .profile p {
     font-size: var(--fs-text2);
+    color: var(--color-dark);
+}
+
+.text-muted {
+    color: var(--color-dark);
 }
 
 /*  Date  */
@@ -479,6 +467,10 @@ main .insights .number {
         grid-template-columns: 7rem auto 23rem;
     }
 
+    aside .logo {
+        margin-right: 1rem;
+    }
+
     aside .logo h2 {
         display: none;
     }
@@ -539,7 +531,7 @@ main .insights .number {
         height: 100vh;
         padding: var(--card-padding);
         display: none;
-        animation: showMenu 800ms ease forwards;
+        animation: showMenu 300ms ease forwards;
     }
 
     @keyframes showMenu {
@@ -631,6 +623,7 @@ main .insights .number {
         font-size: 2rem;
     }
 }
+
 
 
 
