@@ -384,6 +384,10 @@ main .insights .number {
     justify-content: center;
 }
 
+.right .theme-toggler span .l {
+    background: var(--color-primary);
+}
+   
 .right .theme-toggler .d.active {
     background: var(--color-primary);
     color: rgb(255, 255, 255);

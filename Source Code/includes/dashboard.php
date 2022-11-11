@@ -1,6 +1,5 @@
 <?php 
 
-
     $uname = $_POST['username'];
     $pword = $_POST['password']; 
 
@@ -29,7 +28,6 @@
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,64 +38,11 @@
     <!-- Materical Icons Link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="../CSS/dashboardstyle.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
 </head>
 <body>
     <div class="container">
-        <aside>
-            <div class="top">
-                <div class="logo">
-                   <a href="#"><img src="../Images/ivet.png" alt="IVET Logo"></a>
-                    <h2><span class="primary-variant">ANIMAL</span><span class="warning"> CLINIC</span></h2>
-                </div>
-                <div class="close" id="close-btn">
-                    <span class="material-symbols-sharp">close</span>
-                </div>
-            </div>
-
-            <div class="sidebar">
-                <a href="#">
-                    <span class="material-symbols-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="useraccount.php">
-                    <span class="material-symbols-sharp">person</span>
-                    <h3>User Account</h3>
-                </a>
-                <a href="profile.php" class="active">
-                    <span class="material-symbols-sharp">pets</span>
-                    <h3>Profile</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">inventory</span>
-                    <h3>Stock</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">inventory_2</span>
-                    <h3>Add Stock</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">medical_information</span>
-                    <h3>Products and Services</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">find_in_page</span>
-                    <h3>Audit Trail</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">report</span>
-                    <h3>Reports</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-                <a href="index.php">
-                    <span class="material-symbols-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
-            </div>
-        </aside>
+        <?php  include 'aside.php'; ?>
         <!--  Main Tag  -->
         <main>
             <h1>Dashboard</h1>
@@ -213,38 +158,8 @@
         </main>
 
         <!--  End of Main Tag  -->
-        <div class="right">
-            <div class="top">
-                <button id="menu-btn">
-                    <span class="material-symbols-sharp">menu</span>
-                </button>
-                <div class="theme-toggler">
-                    <span class="material-symbols-sharp">light_mode</span>
-                    <span class="material-symbols-sharp d">dark_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Welcome,  <b>Kim</b></p>
-                        <small class="text-muted">Administrator</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="../Images/profile-1.jpg" alt="User Photo">
-                    </div>
-                </div>
-            </div>
+        <?php   include 'systemaccountanddate.php'; ?>
 
-            <!-- End of top -->
-            <div class="date-today">
-                <div class="rectangle-border"></div>
-                <div class="datetoday">
-                <span class="material-symbols-sharp">event</span>
-                       <?php  echo "<br>Today is " . 
-                       date("M d, Y \n l, ") . 
-                       "<br>Have a great day! :)"   ?>
-                </div>
-            </div>
-
-            <!--  End of Date  -->
             <div class="schedule">
                 <h2>Schedule Reservations</h2>
                 <div class="schedinfo">
