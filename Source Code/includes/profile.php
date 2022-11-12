@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Account</title>
+    <title>Profile</title>
     <!-- Materical Icons Link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Stylesheet  -->
@@ -65,27 +65,13 @@
                 </div>
             </section>
             <!--  End of table useraccount   -->
-            <h1>Create Profile</h1>
-            <div class="insights">
-                <div class="sales">
-                    <span class="material-symbols-sharp">analytics</span>
-                         <div class="middle">
-                            <div class="left">
-                                <h3>Total Sales</h3>
-                                <h1>₱435,000</h1>
-                            </div>
-                            <div class="progress">
-                                <svg>
-                                    <circle cx='38' cy='38' r='36' ></circle>
-                                </svg>
-                                <div class="number">
-                                    <p>79%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 30 Days</small>
+            <section class="tableaccountrecords">
+                <h1>Create Profile</h1>
+                <div class="accountrecords">
+                       
+                    
                 </div>
-                <!--  End of Sales  -->
+            </section>
         </main>
 
         <!--  End of Main Tag  -->

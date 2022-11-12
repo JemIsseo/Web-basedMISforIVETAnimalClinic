@@ -32,7 +32,7 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 /*  DARK MODE  */
-.dark-mode-variables {
+.darkmode {
     --color-background: #181a1e;
     --color-white: #202528;
     --color-dark: #edeffd;
@@ -360,11 +360,11 @@ main .insights .number {
     gap: 1rem;
 }
 
-.right .top button {
+#menu-btn {
     display: none;
 }
 
-.right .theme-toggler {
+.right #dark-mode-toggle {
     background: var(--color-info-light);
     display: flex;
     justify-content: space-between;
@@ -375,7 +375,7 @@ main .insights .number {
     border-radius: var(--border-radius-1);
 }
 
-.right .theme-toggler span {
+.right #dark-mode-toggle span {
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -384,11 +384,7 @@ main .insights .number {
     justify-content: center;
 }
 
-.right .theme-toggler span .l {
-    background: var(--color-primary);
-}
-   
-.right .theme-toggler .d.active {
+.right #dark-mode-toggle span.active {
     background: var(--color-primary);
     color: rgb(255, 255, 255);
     border-radius: var(--border-radius-2);

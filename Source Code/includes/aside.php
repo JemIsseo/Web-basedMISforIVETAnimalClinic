@@ -18,7 +18,7 @@
                     <span class="material-symbols-sharp">person</span>
                     <h3>User Account</h3>
                 </a>
-                <a href="profile.php" class="active">
+                <a href="profile.php">
                     <span class="material-symbols-sharp">pets</span>
                     <h3>Profile</h3>
                 </a>

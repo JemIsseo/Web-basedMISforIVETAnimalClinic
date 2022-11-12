@@ -4,10 +4,10 @@
                 <button id="menu-btn">
                     <span class="material-symbols-sharp">menu</span>
                 </button>
-                <div class="theme-toggler">
-                    <span class="material-symbols-sharp l">light_mode</span>
-                    <span class="material-symbols-sharp d">dark_mode</span>
-                </div>
+                <button id="dark-mode-toggle" class="theme-toggler">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </button>
                 <div class="profile">
                     <div class="info">
                         <p>Welcome,  <b>Kim</b></p>
