@@ -67,11 +67,46 @@
                 </div>
             </section>
             <!--  End of table useraccount   -->
-            <h1>Create an Account</h1>
-            
+            <section class="tableaccountrecords">
+                <h1>Create An Account</h1>
+                <div class="accountrecordsbg">
+                    <div class="accountrecords">
+                    <form action="" method="POST" >
+                            <div class="profilepicture">
+                                <span class="material-symbols-sharp">account_circle</span>
+                            </div> 
+                    
+                        <div class="formprofile">
+                             
+                            <div>
+                                <input type="text" name="username" required>
+                                <span>Username</span>
+                            </div>
+                            <div>
+                                <input type="password" name="password" required>
+                                <span>Password</span>
+                            </div>
+                            <div>
+                                <input type="password" name="password" required>
+                                <span>Confirm Password</span>
+                            </div>
+                            <div>
+                                <input type="text" name="usertype" required>
+                                <span>Usertype</span>
+                            </div>
+                            <div>
+                                <input type="text" name="loginname" required>
+                                <span>Loginname</span>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </section>
+            <!--  End of Create Profile  -->
         </main>
-
         <!--  End of Main Tag  -->
+
         <?php   include 'systemaccountanddate.php'; ?>
     </div>
     

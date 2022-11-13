@@ -112,12 +112,6 @@ main {
     font-family: poppins, sans-serif;
 }
 
-.error:hover {
-    background-color: transparent;
-    color: transparent;
-    transition: 100ms;
-}
-
 .glassloginform {
     margin-top: 2em;
     min-height: 80vh;

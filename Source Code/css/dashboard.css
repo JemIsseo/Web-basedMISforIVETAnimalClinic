@@ -600,7 +600,11 @@ main .insights .number {
         box-shadow: 0 1rem 1rem var(--color-light);
     }
 
-    .right .top .theme-toggler {
+    #menu-btn {
+        display: inline;
+    }
+    
+    .right .top #dark-mode-toggle {
         width: 4.4rem;
         position: absolute;
         left: 66%;
