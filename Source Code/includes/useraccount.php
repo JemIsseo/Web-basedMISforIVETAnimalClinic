@@ -24,42 +24,44 @@
                         <table class="content-table">
                             <thead>
                                 <tr>
-                                    <th>Transaction No.</th>
-                                    <th>Item Name</th>
-                                    <th>Quantity</th>
-                                    <th>Date</th>
+                                    <th>Profile</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Usertype</th>
+                                    <th>Loginname</th>
+                                    <th>         </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Dog Soap</td>
-                                    <td>4</td>
-                                    <td>12/01/2022</td>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/petcare.png" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>admin</td>
+                                    <td>***</td>
+                                    <td>Administrator</td>
+                                    <td>admin123</td>
+                                    <td>
+                                    <button type="button"><span class="material-symbols-sharp edit">edit</span></button>
+                                    <button type="button"><span class="material-symbols-sharp archive">archive</span></button>
+                                    </td> 
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>Immunol Vitamin</td>
-                                    <td>1</td>
-                                    <td>12/03/2022</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Pedigree</td>
-                                    <td>3</td>
-                                    <td>12/04/2022</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Antibiotic</td>
-                                    <td>5</td>
-                                    <td>12/07/2022</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Beef Jerky Food</td>
-                                    <td>10</td>
-                                    <td>12/10/2022</td>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
+                                    <td>
+                                    <button type="button"><span class="material-symbols-sharp edit">edit</span></button>
+                                    <button type="button"><span class="material-symbols-sharp archive">archive</span></button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -73,12 +75,15 @@
                     <div class="accountrecords">
                     <form action="" method="POST" >
                             <div class="profilepicture">
-                                <span class="material-symbols-sharp">account_circle</span>
+                                <span class="material-symbols-sharp">account_circle</span><br>
+                                <input type="file">
+                                <button type="submit" class="upload">Upload</button>
                             </div> 
+
                     
                         <div class="formprofile">
                              
-                            <div>
+                            <div> 
                                 <input type="text" name="username" required>
                                 <span>Username</span>
                             </div>
@@ -91,7 +96,12 @@
                                 <span>Confirm Password</span>
                             </div>
                             <div>
-                                <input type="text" name="usertype" required>
+                                <span class="material-symbols-sharp markdown">expand_more</span>
+                                <select name="usertype" id="ut" required>
+                                <option value="Usertype">Usertype</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Secretary">Secretary</option>    
+                                </select>
                                 <span>Usertype</span>
                             </div>
                             <div>
@@ -108,8 +118,15 @@
         <!--  End of Main Tag  -->
 
         <?php   include 'systemaccountanddate.php'; ?>
-    </div>
     
+    
+            <!--  Start of Buttons  -->
+            <div class="buttons">
+                <button type="submit" class="button-1"> Add </button>
+                <button type="submit" class="button-1"> Edit </button>
+                <button type="submit" class="button-1"> Archive </button>
+            </div>
+    </div>
     <script src="../JS/script.js"></script>
 </body>
 </html>

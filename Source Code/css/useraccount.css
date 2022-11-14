@@ -12,7 +12,6 @@
     --color-info-light: #dce1eb;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
-    --color-info-light: #dce1eb;
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
@@ -109,6 +108,18 @@ h5 {
 
 small {
     font-size: 0.75rem;
+}
+
+.edit {
+    color: var(--color-success);
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.archive {
+    color: var(--color-primary);
+    background: var(--color-white);
+    cursor: pointer;
 }
 
 .profile-photo {
@@ -253,34 +264,65 @@ main {
     gap: 1.5em;
 }
 
-.formprofile div {
-    margin: 0 3em;
-}
-
 .formprofile input {
     height: 4vh;
     width: 15vw;
-    border: 1px solid var(--color-dark);
+    border: 2px solid var(--color-primary);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
+    background: var(--color-info-light);
+    margin: 0 4em;
+    color: var(--color-primary);
+    font-weight: bold;
+    text-align: center;
 }
 
 .formprofile span {
-    margin: 2em;
+    margin-right: 1em;
 }
 
+#ut {
+    height: 4vh;
+    width: 15vw;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    background: var(--color-info-light);
+    margin: 0 4em;
+    color: var(--color-primary);
+    font-weight: bold;
+    text-align: center;
+}
+
+.markdown {
+    position: absolute;
+    left: 31.6em;
+    color: var(--color-primary);
+}
 
 .profilepicture {
     position: absolute;
     height: 28vh;
     width: 15vw;
     border-radius: 50%;
-    margin-left: 3em;
+    margin-left: 5em;
+}
+
+.profilepicture .upload {
+    border: 2px solid var(--color-primary);
+    margin: .5em 0 0 5em;
+    color: var(--color-primary);
+    background: var(--color-info-light);
+    padding: .3em;
+    border-radius: 4px;
 }
 
 .profilepicture span {
-    font-size: 200px;
+    font-size: 180px;
     color: var(--color-primary);
+    background: var(--color-info-light);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
 }
 
 
@@ -288,14 +330,14 @@ main {
 /*  Table Transaction  */
 .content-table {
     border-collapse: collapse;
-    font-size: .93em;
+    font-size: .90em;
     width: 100%;
 }
 
 .content-table thead tr {
     background-color: var(--color-primary);
     color: var(--color-background);
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -311,7 +353,8 @@ main {
 
 .content-table th,
 .content-table td {
-    padding: 12px 15px;
+    text-align: center;
+    padding: 12px;
     border-bottom: 1px solid rgb(238, 233, 233);
 }
 
@@ -409,6 +452,42 @@ main {
     font-size: var(--fs-text1);
     font-weight: bolder;
 }
+
+/* Buttons */
+.buttons {
+    background: var(--color-white);
+    height: 45vh;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease; 
+    display: grid;
+    margin: 1em;
+    margin-top: 5.5em;
+}
+
+.buttons:hover {
+    box-shadow: none;
+}
+
+.button-1 {
+    width: 45%;
+    height: 4em;
+    border-radius: 2em;
+    border:  4px solid #6cdbeb;
+    color:#30b69d;
+    font-family: 'Questrial', sans-serif;
+    font-size: .95em;
+    background: var(--color-info-light);
+    margin: auto;
+    font-weight: bold;
+}
+
+.button-1:hover {
+    background-color: #30b69d;
+    color: white;
+    transition: 200ms;
+}
+
 
 /*  Media Queries  */
 @media screen and (max-width: 1200px) {

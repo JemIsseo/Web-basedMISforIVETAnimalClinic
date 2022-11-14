@@ -43,6 +43,8 @@ main {
     font-size: 1em;
     margin-left: 23%;
     margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .input-box span {
