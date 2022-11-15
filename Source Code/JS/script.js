@@ -37,3 +37,16 @@ darkModeToggle.addEventListener('click', () => {
     darkModeToggle.querySelector('span:nth-child(2)').classList.toggle('active');
     darkModeToggle.querySelector('span:nth-child(1)').classList.toggle('active');
 });
+
+
+const modal = document.querySelector('#modal');
+const openModal = document.querySelector('.open-button');
+const closeModal = document.querySelector('.close-button');
+
+openModal.addEventListener('click', () => {
+    modal.showModal()
+})
+
+closeModal.addEventListener('click', () => {
+    modal.close()
+})

@@ -44,8 +44,8 @@
                                     <td>Administrator</td>
                                     <td>admin123</td>
                                     <td>
-                                    <button type="button"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button type="button"><span class="material-symbols-sharp archive">archive</span></button>
+                                    <a href="#"><span class="material-symbols-sharp edit">edit</span></a>
+                                    <a href="#"><span class="material-symbols-sharp archive">archive</span></a>
                                     </td> 
                                 </tr>
                                 <tr>
@@ -59,8 +59,23 @@
                                     <td>Secretary</td>
                                     <td>secretary_321</td>
                                     <td>
-                                    <button type="button"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button type="button"><span class="material-symbols-sharp archive">archive</span></button>
+                                    <a href="#"><span class="material-symbols-sharp edit">edit</span></a>
+                                    <a href="#"><span class="material-symbols-sharp archive">archive</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
+                                    <td>
+                                    <a href="#"><span class="material-symbols-sharp edit">edit</span></a>
+                                    <a href="#"><span class="material-symbols-sharp archive">archive</span></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -73,59 +88,124 @@
                 <h1>Create An Account</h1>
                 <div class="accountrecordsbg">
                     <div class="accountrecords">
-                    <form action="" method="POST" >
+                        <form action="" method="POST" >
                             <div class="profilepicture">
-                                <span class="material-symbols-sharp">account_circle</span><br>
-                                <input type="file">
-                                <button type="submit" class="upload">Upload</button>
+                                <span class="material-symbols-sharp">account_circle</span><br><br>
+                                <input type="file" name"profile">
                             </div> 
-
-                    
-                        <div class="formprofile">
-                             
+                            <div class="formprofile">
                             <div> 
-                                <input type="text" name="username" required>
+                                <input type="text" name="username" >
                                 <span>Username</span>
                             </div>
                             <div>
-                                <input type="password" name="password" required>
+                                <input type="password" name="password" >
                                 <span>Password</span>
                             </div>
                             <div>
-                                <input type="password" name="password" required>
+                                <input type="password" name="cpassword" >
                                 <span>Confirm Password</span>
                             </div>
                             <div>
                                 <span class="material-symbols-sharp markdown">expand_more</span>
-                                <select name="usertype" id="ut" required>
-                                <option value="Usertype">Usertype</option>
+                                <select name="usertype" id="ut" >
                                 <option value="Admin">Admin</option>
                                 <option value="Secretary">Secretary</option>    
                                 </select>
                                 <span>Usertype</span>
                             </div>
                             <div>
-                                <input type="text" name="loginname" required>
+                                <input type="text" name="loginname">
                                 <span>Loginname</span>
                             </div>
+                                <button name="saveprofile" type="submit" class="save">Save</button>
                         </div>
-                    </form>
+                         <!-- Start of Modal  -->
+                            <dialog class="modal editprofile" id="modal">
+                                <h1>Edit Profile</h1>
+                                <div class="accountrecordsbg">
+                <div class="accountrecords">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Profile</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Usertype</th>
+                                    <th>Loginname</th>
+                                    <th>         </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/petcare.png" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>admin</td>
+                                    <td>***</td>
+                                    <td>Administrator</td>
+                                    <td>admin123</td>
+                                    <td>
+                                    <a href="#"><span class="material-symbols-sharp edit">edit</span></a>
+                                    <a href="#"><span class="material-symbols-sharp archive">archive</span></a>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
+                                    <td>
+                                    <a href="#"><span class="material-symbols-sharp edit">edit</span></a>
+                                    <a href="#"><span class="material-symbols-sharp archive">archive</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
+                                    <td>
+                                    <a href="#"><span class="material-symbols-sharp edit">edit</span></a>
+                                    <a href="#"><span class="material-symbols-sharp archive">archive</span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                                <button class="button close-button">Close</button>
+                            </dialog>
+                        </form>
                     </div>
                 </div>
             </section>
             <!--  End of Create Profile  -->
+
+           
         </main>
         <!--  End of Main Tag  -->
 
-        <?php   include 'systemaccountanddate.php'; ?>
-    
-    
-            <!--  Start of Buttons  -->
-            <div class="buttons">
-                <button type="submit" class="button-1"> Add </button>
-                <button type="submit" class="button-1"> Edit </button>
-                <button type="submit" class="button-1"> Archive </button>
+        <?php  include 'systemaccountanddate.php'; ?>
+        <h1>Retrieve Profile</h1>
+        <div class="buttons">
+            <div class="buttonmodify">
+                <a href="#" class="open-button"><span class="material-symbols-sharp">table_view</span>View Archive</a>
             </div>
+        </div>
+
     </div>
     <script src="../JS/script.js"></script>
 </body>

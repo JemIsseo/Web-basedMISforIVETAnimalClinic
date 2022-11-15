@@ -257,21 +257,22 @@ main {
 /*  Profile Form  */
 .formprofile {
     padding: 1em;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    margin-left: 5em;
+    width: 90%;
     display: grid;
     justify-content: end;
-    gap: 1.5em;
+    gap: 1em;
 }
 
-.formprofile input {
+.formprofile input ,#ut {
     height: 4vh;
     width: 15vw;
     border: 2px solid var(--color-primary);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
     background: var(--color-info-light);
-    margin: 0 4em;
+    margin: 0 3em;
     color: var(--color-primary);
     font-weight: bold;
     text-align: center;
@@ -279,19 +280,6 @@ main {
 
 .formprofile span {
     margin-right: 1em;
-}
-
-#ut {
-    height: 4vh;
-    width: 15vw;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--border-radius-2);
-    box-shadow: var(--box-shadow);
-    background: var(--color-info-light);
-    margin: 0 4em;
-    color: var(--color-primary);
-    font-weight: bold;
-    text-align: center;
 }
 
 .markdown {
@@ -308,17 +296,27 @@ main {
     margin-left: 5em;
 }
 
-.profilepicture .upload {
-    border: 2px solid var(--color-primary);
-    margin: .5em 0 0 5em;
-    color: var(--color-primary);
-    background: var(--color-info-light);
-    padding: .3em;
+.profilepicture input {
+    background: rgb(163, 158, 158);
+    border: 1px solid var(--color-primary);
+    width: 14vw;
     border-radius: 4px;
 }
 
+.save {
+    border: 2px solid var(--color-info-light);  
+    width: 8vw;
+    color: var(--color-white);
+    background: var(--color-success);
+    padding: .5em;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 67%;
+}
+
 .profilepicture span {
-    font-size: 180px;
+    font-size: 190px;
     color: var(--color-primary);
     background: var(--color-info-light);
     border-radius: 50%;
@@ -456,38 +454,40 @@ main {
 /* Buttons */
 .buttons {
     background: var(--color-white);
-    height: 45vh;
+    height: 43vh;
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
-    transition: all 300ms ease; 
-    display: grid;
+    transition: all 300ms ease;
     margin: 1em;
-    margin-top: 5.5em;
 }
 
 .buttons:hover {
     box-shadow: none;
 }
 
-.button-1 {
-    width: 45%;
-    height: 4em;
-    border-radius: 2em;
-    border:  4px solid #6cdbeb;
-    color:#30b69d;
-    font-family: 'Questrial', sans-serif;
-    font-size: .95em;
-    background: var(--color-info-light);
-    margin: auto;
+.buttonmodify a {
+    background: linear-gradient(to right bottom, rgb(203, 234, 241),var(--color-primary));
+    color: var(--color-dark);
+    padding: 2em 4em;
+    border-radius: 10px;
+    gap: 1em;
+    display: flex;
     font-weight: bold;
+    margin: 2em;
+    text-shadow: 4em 3em 2em var(--color-white);
 }
 
-.button-1:hover {
-    background-color: #30b69d;
-    color: white;
-    transition: 200ms;
+.modal {
+    margin: 6em auto;
+    padding: 2em;
+    height: 80vh;
+    width: 60vw;
 }
 
+.modal::backdrop {
+    background: black;
+    opacity: 0.4;
+}
 
 /*  Media Queries  */
 @media screen and (max-width: 1200px) {
