@@ -8,8 +8,9 @@
     --color-success: #25d15e;
     --color-warning: #f3e13c;
     --color-white: #fff;
-    --color-info-dark: #49666b;;
+    --color-info-dark: #3e4a4d;;
     --color-info-light: #dce1eb;
+    --color-gray: #677381;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
     --color-primary-variant: #111e88;
@@ -303,6 +304,7 @@ main {
     border-radius: 4px;
 }
 
+
 .save {
     border: 2px solid var(--color-info-light);  
     width: 8vw;
@@ -312,7 +314,29 @@ main {
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 67%;
+    margin-left: 21em;
+}
+
+.savechanges {
+    border: 2px solid var(--color-info-light);  
+    width: 8vw;
+    color: var(--color-white);
+    background: var(--color-success);
+    padding: .5em;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel {
+    border: 2px solid var(--color-info-light);  
+    width: 8vw;
+    color: var(--color-white);
+    background: var(--color-gray);
+    padding: .5em;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .profilepicture span {
@@ -465,28 +489,79 @@ main {
     box-shadow: none;
 }
 
-.buttonmodify a {
+.buttonmodify button {
     background: linear-gradient(to right bottom, rgb(203, 234, 241),var(--color-primary));
     color: var(--color-dark);
-    padding: 2em 4em;
+    padding: 2em;
     border-radius: 10px;
-    gap: 1em;
-    display: flex;
     font-weight: bold;
-    margin: 2em;
-    text-shadow: 4em 3em 2em var(--color-white);
+    cursor: pointer;
+    display: flex;
+    gap: 1.3em;
+    width: 220px;
+    margin: 2em auto;
 }
 
 .modal {
-    margin: 6em auto;
-    padding: 2em;
-    height: 80vh;
-    width: 60vw;
+   width: 850px;
+   height: 460px;
+   background: var(--color-background);
+   border-radius: 12px;
+   margin: auto;
+   box-shadow: var(--box-shadow);
 }
 
-.modal::backdrop {
-    background: black;
-    opacity: 0.4;
+.modal:hover {
+    box-shadow: none;
+}
+
+.modal#hide {
+    display: none;
+}
+
+.modal#show {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    z-index: 50;
+    box-shadow: 0 0 100em var(--color-dark);
+}
+
+
+.modal .modal-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 18px;
+}
+
+.modal .modal-header button {
+    color: var(--color-dark);
+    cursor: pointer;
+    background: transparent;
+}
+
+.modaltableprofile {
+    padding: 0 2em;
+}
+
+.profile-edit-height {
+    height: 50vh;
+}
+
+.profile-edit-picture {
+    margin: 0 auto;
+     margin-top: 2em;
+}
+
+.buttonflex {
+    margin-top: 2em;
+    margin-right: 1em;
+    text-align: end;
+}
+
+.profile-edit-markdown {
+    top: 11em;
+    left: 24.5em;
 }
 
 /*  Media Queries  */

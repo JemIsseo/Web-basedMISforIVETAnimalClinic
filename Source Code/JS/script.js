@@ -39,14 +39,19 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 
-const modal = document.querySelector('#modal');
-const openModal = document.querySelector('.open-button');
-const closeModal = document.querySelector('.close-button');
+const modal = document.querySelector('.modal');
+const hideIcon = document.querySelector('#hideIcon');
+const hideButton = document.querySelector('#hideButton');
+const showButton = document.querySelector('#showButton');
 
-openModal.addEventListener('click', () => {
-    modal.showModal()
-})
+hideIcon.addEventListener('click', hideModal);
+hideButton.addEventListener('click', hideModal);
+showButton.addEventListener('click', showModal);
 
-closeModal.addEventListener('click', () => {
-    modal.close()
-})
+function hideModal() {
+    modal.id = 'hide';
+}
+
+function showModal() {
+    modal.id = 'show';
+}
