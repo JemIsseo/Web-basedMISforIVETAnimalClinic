@@ -4,6 +4,26 @@ const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
+
+
+// opening modals
+var modalBtns = document.querySelectorAll(".modal-open");
+
+modalBtns.forEach(function(btn){
+    btn.onclick = function() {
+        var modal = btn.getAttribute("data-modal");
+
+        document.getElementById(modal).style.display = "block";
+    };
+});
+
+var closeBtns =  document.querySelectorAll(".modal-close");
+closeBtns.forEach(function(btn){
+    btn.onclick = function() {
+        var modal = (btn.closest(".modal").style.display = "none");
+    };
+});
+
 // show sidebar
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
@@ -39,19 +59,19 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 
-const modal = document.querySelector('.modal');
-const hideIcon = document.querySelector('#hideIcon');
-const hideButton = document.querySelector('#hideButton');
-const showButton = document.querySelector('#showButton');
+// const modal = document.querySelector('.modal');
+// const hideIcon = document.querySelector('#hideIcon');
+// const hideButton = document.querySelector('#hideButton');
+// const showButton = document.querySelector('#showButton');
 
-hideIcon.addEventListener('click', hideModal);
-hideButton.addEventListener('click', hideModal);
-showButton.addEventListener('click', showModal);
+// hideIcon.addEventListener('click', hideModal);
+// hideButton.addEventListener('click', hideModal);
+// showButton.addEventListener('click', showModal);
 
-function hideModal() {
-    modal.id = 'hide';
-}
+// function hideModal() {
+//     modal.id = 'hide';
+// }
 
-function showModal() {
-    modal.id = 'show';
-}
+// function showModal() {
+//     modal.id = 'show';
+// }

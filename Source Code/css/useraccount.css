@@ -13,6 +13,8 @@
     --color-gray: #677381;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
+    --color-light-blue: #3b9ae7;
+    --color-light-red: #f59494;
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
@@ -304,7 +306,7 @@ main {
     border-radius: 4px;
 }
 
-
+/* Color of Buttons */
 .save {
     border: 2px solid var(--color-info-light);  
     width: 8vw;
@@ -317,7 +319,7 @@ main {
     margin-left: 21em;
 }
 
-.savechanges {
+.savechanges, .cancel, .yes ,.no {
     border: 2px solid var(--color-info-light);  
     width: 8vw;
     color: var(--color-white);
@@ -329,14 +331,16 @@ main {
 }
 
 .cancel {
-    border: 2px solid var(--color-info-light);  
-    width: 8vw;
-    color: var(--color-white);
     background: var(--color-gray);
-    padding: .5em;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
+}
+
+.yes {
+    background: var(--color-light-blue);
+}
+
+
+.no {
+    background: var(--color-light-red);
 }
 
 .profilepicture span {
@@ -346,8 +350,6 @@ main {
     border-radius: 50%;
     box-shadow: var(--box-shadow);
 }
-
-
 
 /*  Table Transaction  */
 .content-table {
@@ -503,65 +505,73 @@ main {
 }
 
 .modal {
-   width: 850px;
-   height: 460px;
-   background: var(--color-background);
-   border-radius: 12px;
-   margin: auto;
-   box-shadow: var(--box-shadow);
-}
-
-.modal:hover {
-    box-shadow: none;
-}
-
-.modal#hide {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
     display: none;
+    box-shadow: 0 0 50rem var(--color-dark);
 }
 
-.modal#show {
-    position: absolute;
-    left: 20%;
-    top: 20%;
-    z-index: 50;
-    box-shadow: 0 0 100em var(--color-dark);
+.modal-content {
+    background: var(--color-white);
+    margin-top: 100px;
+    width: 61%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    border-radius: 10px;
+    z-index: 4;
 }
 
-
-.modal .modal-header {
+.modal-header {
     display: flex;
-    justify-content: flex-end;
-    padding: 10px 18px;
 }
 
-.modal .modal-header button {
-    color: var(--color-dark);
-    cursor: pointer;
+.modal-header .modal-close {
+    margin-left: 77%;
     background: transparent;
 }
 
-.modaltableprofile {
-    padding: 0 2em;
+.modal-header .modal-close span{
+    color: var(--color-dark);
+    cursor: pointer;
 }
 
-.profile-edit-height {
-    height: 50vh;
+.modal-body {
+    padding: 1em 0;
 }
 
-.profile-edit-picture {
-    margin: 0 auto;
-     margin-top: 2em;
+.modal-footer {
+    padding: 1em;
+}
+
+.modal-footer .modal-close {
+    padding: .5em 1em;
+}
+
+#modal2 .modal-content {
+    width: 40%;
+}
+
+
+#modal2 .modal-body {
+    padding: 2em;
+}
+
+#modal2 .modal-header .modal-close {
+    margin-left: 50%;
+}
+
+#modal3 .modal-content {
+    width: 80%;
 }
 
 .buttonflex {
-    margin-top: 2em;
-    margin-right: 1em;
-    text-align: end;
-}
-
-.profile-edit-markdown {
-    top: 11em;
-    left: 24.5em;
+    text-align: right;
 }
 
 /*  Media Queries  */
