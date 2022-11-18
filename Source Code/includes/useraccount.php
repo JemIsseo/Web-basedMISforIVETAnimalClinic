@@ -18,10 +18,15 @@
         <!--  Main Tag  -->
         <main>
             <section class="tableaccountrecords">
-                <h1>Account Records</h1>
+                <div class="accrecsearch">
+                    <h1>Account Records</h1>
+                    <div class="searchbar">
+                        <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
+                    </div>
+                </div>
                 <div class="accountrecordsbg">
                     <div class="accountrecords">
-                        <table class="content-table">
+                        <table class="content-table table-fixed">
                             <thead>
                                 <tr>
                                     <th>Profile</th>
@@ -59,8 +64,8 @@
                                     <td>Secretary</td>
                                     <td>secretary_321</td>
                                     <td>
-                                    <button name="savechanges" id="showButton"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" id="showButtonArchive"><span class="material-symbols-sharp archive">archive</span></button> 
+                                    <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
+                                    <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +79,22 @@
                                     <td>Secretary</td>
                                     <td>secretary_321</td>
                                     <td>
-                                    <button name="savechanges" id="showButton"><span class="material-symbols-sharp edit">edit</span></button>
+                                    <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
+                                    <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
+                                    <td>
+                                    <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
                                     <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
                                     </td>
                                 </tr>
@@ -111,6 +131,7 @@
                                 <select name="usertype" id="ut" >
                                 <option value="Admin">Admin</option>
                                 <option value="Secretary">Secretary</option>    
+                                <option value="Secretary">Animal Handler</option> 
                                 </select>
                                 <span>Usertype</span>
                             </div>
@@ -133,11 +154,11 @@
         <h1>Retrieve Profile</h1>
         <div class="buttons">
             <div class="buttonmodify">
-                <button class="modal-open" data-modal="modal3"><span class="material-symbols-sharp">table_view</span>View Archive</button> 
+                <button class="modal-open" data-modal="modal4"><span class="material-symbols-sharp">table_view</span>View Archive</button> 
             </div>
         </div>
         <!-- Start of Modal --> 
-
+        <!-- Modal of Edit Profile -->
         <div class="modal" id="modal1">
             <div class="modal-content">
                 <div class="modal-header"><h1>Edit Profile</h1>
@@ -164,11 +185,12 @@
                                 <input type="password" name="cpassword" >
                                 <span>Confirm Password</span>
                             </div>
-                            <div>
-                                <span class="material-symbols-sharp markdown">expand_more</span>
+                            <div class="cbo-usertype">
+                                <span class="material-symbols-sharp markdown-editprofile">expand_more</span>
                                 <select name="usertype" id="ut" >
                                 <option value="Admin">Admin</option>
-                                <option value="Secretary">Secretary</option>    
+                                <option value="Secretary">Secretary</option> 
+                                <option value="Secretary">Animal Handler</option>    
                                 </select>
                                 <span>Usertype</span>
                             </div>
@@ -189,6 +211,7 @@
                 </div>
             </div>
         </div>
+        <!-- Modal of Archive Account MessageBox -->
         <div class="modal" id="modal2">
             <div class="modal-content">
                 <div class="modal-header"><h1>Archive Account</h1>
@@ -204,15 +227,40 @@
                 </div>
             </div>
         </div>
+        <!-- Modal of Restore Account MessageBox -->
         <div class="modal" id="modal3">
             <div class="modal-content">
-                <div class="modal-header"><h1>Restore Account</h1>
+                <div class="modal-header"><h1>Unarchive Account</h1>
                     <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body"><h3>Are you sure you want to restore this record?</h3></div>
+                    <div class="modal-footer">
+                        <div class="buttonflex">
+                            <button name="savearchiveaccount" type="submit" class="yes">Yes</button>
+                            <button name="updateprofile" type="submit" class="cancel no modal-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal of Restore Account -->
+        <div class="modal" id="modal4">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Restore Account</h1>
+                    <div class="accrecsearch">
+                        <div class="searchbar">
+                        <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
+                        <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                        </div>
+                    </div>
+                </div> 
+                
+                   
+            <div class="modal-body">
                 <div class="accountrecordsbg">
                     <div class="accountrecords">
-                        <table class="content-table">
+                        <table class="content-table table-archive">
                             <thead>
                                 <tr>
                                     <th>Profile</th>
@@ -235,8 +283,9 @@
                                     <td>Administrator</td>
                                     <td>admin123</td>
                                     <td>
-                                    <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button> 
+                                    <button class="modal-open" data-modal="modal3" name="restoreaccount">
+                                        <span class="material-symbols-sharp restore">unarchive</span>
+                                    </button> 
                                     </td> 
                                 </tr>
                                 <tr>
@@ -250,23 +299,9 @@
                                     <td>Secretary</td>
                                     <td>secretary_321</td>
                                     <td>
-                                    <button name="savechanges" id="showButton"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" id="showButtonArchive"><span class="material-symbols-sharp archive">archive</span></button> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="profile-photo">
-                                            <img src="../images/profile-1.jpg" alt="User Photo">
-                                        </div>
-                                    </td>
-                                    <td>sec</td>
-                                    <td>****</td>
-                                    <td>Secretary</td>
-                                    <td>secretary_321</td>
-                                    <td>
-                                    <button name="savechanges" id="showButton"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
+                                    <button class="modal-open" data-modal="modal3" name="restoreaccount">
+                                        <span class="material-symbols-sharp restore">unarchive</span>
+                                    </button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -281,8 +316,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
+            
+    </div>
 
     <script src="../JS/script.js"></script>
 </body>

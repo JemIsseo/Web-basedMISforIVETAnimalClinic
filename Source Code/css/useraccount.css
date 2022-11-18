@@ -9,7 +9,7 @@
     --color-warning: #f3e13c;
     --color-white: #fff;
     --color-info-dark: #3e4a4d;;
-    --color-info-light: #dce1eb;
+    --color-info-light: #ccd5e6;
     --color-gray: #677381;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
@@ -113,7 +113,9 @@ small {
     font-size: 0.75rem;
 }
 
-.edit {
+.edit, 
+.archive,
+.restore {
     color: var(--color-success);
     background: var(--color-white);
     cursor: pointer;
@@ -121,8 +123,10 @@ small {
 
 .archive {
     color: var(--color-primary);
-    background: var(--color-white);
-    cursor: pointer;
+}
+
+.restore {
+    color: var(--color-warning);
 }
 
 .profile-photo {
@@ -286,8 +290,14 @@ main {
 }
 
 .markdown {
-    position: absolute;
-    left: 31.6em;
+    position: fixed;
+    right: 41%;
+    color: var(--color-primary);
+}
+
+.markdown-editprofile {
+    position: fixed;
+    right: 35%;
     color: var(--color-primary);
 }
 
@@ -298,12 +308,42 @@ main {
     border-radius: 50%;
     margin-left: 5em;
 }
+/* Searchbar Style */
+.accrecsearch {
+    display: flex;
+    gap: 22em;
+}
+
+.searchbar {
+    display: flex;
+    gap: .5em;
+    margin: .4em;
+}
 
 .profilepicture input {
     background: rgb(163, 158, 158);
     border: 1px solid var(--color-primary);
     width: 14vw;
     border-radius: 4px;
+}
+
+.searchbar input {
+    padding: .3em;
+    font-family: inherit;
+    border: 2px solid var(--color-primary);
+    width: 15vw;
+    border-radius: 5px;
+    background: var(--color-white);
+}
+
+::placeholder {
+    color: var(--color-dark);
+}
+
+.searchbar span {
+    color: var(--color-primary);
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* Color of Buttons */
@@ -351,11 +391,14 @@ main {
     box-shadow: var(--box-shadow);
 }
 
-/*  Table Transaction  */
+/*  Table User Account  */
 .content-table {
     border-collapse: collapse;
-    font-size: .90em;
+    font-size: .9em;
     width: 100%;
+    display: block;
+    height: 240px;
+    overflow: auto;
 }
 
 .content-table thead tr {
@@ -378,8 +421,14 @@ main {
 .content-table th,
 .content-table td {
     text-align: center;
-    padding: 12px;
+    padding: 12px 27px;
     border-bottom: 1px solid rgb(238, 233, 233);
+}
+
+
+.table-archive th, 
+.table-archive td {
+    padding: 12px 56px;
 }
 
 /* Start of Right */
@@ -492,8 +541,8 @@ main {
 }
 
 .buttonmodify button {
-    background: linear-gradient(to right bottom, rgb(203, 234, 241),var(--color-primary));
-    color: var(--color-dark);
+    background: linear-gradient(to right bottom, rgb(71, 189, 216),var(--color-primary));
+    color: var(--color-white);
     padding: 2em;
     border-radius: 10px;
     font-weight: bold;
@@ -566,9 +615,33 @@ main {
     margin-left: 50%;
 }
 
-#modal3 .modal-content {
+#modal4 .modal-content {
     width: 80%;
 }
+
+#modal4 .modal-header {
+    padding: 1em;
+    display: flex;
+    gap: 30em;
+}
+
+#modal3 {
+    z-index: 10;
+}
+
+#modal3 .modal-content {
+    width: 45%;
+}
+
+
+#modal3 .modal-body {
+    padding: 2em;
+}
+
+#modal3 .modal-header .modal-close {
+    margin-left: 50%;
+}
+
 
 .buttonflex {
     text-align: right;
