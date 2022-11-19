@@ -9,7 +9,8 @@
     --color-warning: #f3e13c;
     --color-white: #fff;
     --color-info-dark: #3e4a4d;;
-    --color-info-light: #ccd5e6;
+    --color-input-light: rgb(255, 255, 255);
+    --color-info-light: #eaedf3;
     --color-gray: #677381;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
@@ -45,7 +46,9 @@
 
 
 /* General Properties */
-* {
+*, 
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -278,7 +281,7 @@ main {
     border: 2px solid var(--color-primary);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
-    background: var(--color-info-light);
+    background: var(--color-input-light);
     margin: 0 3em;
     color: var(--color-primary);
     font-weight: bold;

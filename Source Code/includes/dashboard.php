@@ -1,30 +1,30 @@
 <?php 
 
-    $uname = $_POST['username'];
-    $pword = $_POST['password']; 
+    // $uname = $_POST['username'];
+    // $pword = $_POST['password']; 
 
-    // Database Connection
+    // // Database Connection
 
-    $con = new mysqli("localhost", "root", "", "dbivetclinic");
-    if ($con->connect_error) {
-        die("Failed to connect : " . $con->connect_error);
-    } else {
-        $stmt = $con->prepare("SELECT * FROM tbluseraccount WHERE username = ?");
-        $stmt->bind_param("s", $uname);
-        $stmt->execute();
-        $stmt_result = $stmt->get_result();
-        if ($stmt_result->num_rows > 0) {
-            $data = $stmt_result->fetch_assoc();
-            if ($data['password'] === $pword) {
-            } else {
-                header("Location: index.php?error=Login failed please try again");
-                die();
-            }
-        } else {
-            header("Location: index.php?error=Login failed please try again");
-            die();  
-        }
-    }
+    // $con = new mysqli("localhost", "root", "", "dbivetclinic");
+    // if ($con->connect_error) {
+    //     die("Failed to connect : " . $con->connect_error);
+    // } else {
+    //     $stmt = $con->prepare("SELECT * FROM tbluseraccount WHERE username = ?");
+    //     $stmt->bind_param("s", $uname);
+    //     $stmt->execute();
+    //     $stmt_result = $stmt->get_result();
+    //     if ($stmt_result->num_rows > 0) {
+    //         $data = $stmt_result->fetch_assoc();
+    //         if ($data['password'] === $pword) {
+    //         } else {
+    //             header("Location: loginform.php?error=Login failed please try again");
+    //             die();
+    //         }
+    //     } else {
+    //         header("Location: loginform.php?error=Login failed please try again");
+    //         die();  
+    //     }
+    // }
 ?>
 
 

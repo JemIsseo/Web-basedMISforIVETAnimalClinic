@@ -22,7 +22,7 @@
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
 
-    --card-padding: 1.8rem;
+    --card-padding: 1.5rem;
     --padding-1: 1.2rem;
 
     --fs-text1: 1.4rem;
@@ -43,7 +43,9 @@
 
 
 /* General Properties */
-* {
+*, 
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -225,23 +227,11 @@ main {
     margin-top: 1.4rem;
 }
 
-main .date {
-    display: inline-block;
-    background: var(--color-light);
-    border-radius: var(--border-radius-1);
-    margin-top: 1rem;
-    padding: 0.5rem 1.6rem;
-}
-
-main .date input[type="date"] {
-    background: transparent;
-    color: var(--color-dark);
-}
-
 main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    gap: 1.4rem;
+    margin: 1em;
 }
 
 main .insights > div {

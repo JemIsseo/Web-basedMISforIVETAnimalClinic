@@ -24,9 +24,12 @@
                 <div class="rectangle-border"></div>
                 <div class="datetoday">
                 <span class="material-symbols-sharp">event</span>
-                       <?php  echo "<br>Today is " . 
-                       date("M d, Y \n l, ") . 
-                       "<br>Have a great day! :)"   ?>
+                       <?php  
+                       date_default_timezone_set( 'Asia/Manila' );  
+                       echo "<br>Today is " . 
+                       date("M d, Y \n l, h:i:sA ") . 
+                       "<br>Have a great day! :)";
+                       ?>
                 </div>
             </div>
             <!--  End of Date  -->

@@ -4,7 +4,9 @@
     --fs-text3: .80rem;
 }
 
-* {
+*, 
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;   
