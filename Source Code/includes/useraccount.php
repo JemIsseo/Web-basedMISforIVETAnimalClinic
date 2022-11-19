@@ -107,7 +107,7 @@
             <section class="tableaccountrecords">
                 <h1>Create An Account</h1>
                 <div class="accountrecordsbg">
-                    <div class="accountrecords">
+                    <div class="accountrecords ">
                         <form action="" method="POST" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>

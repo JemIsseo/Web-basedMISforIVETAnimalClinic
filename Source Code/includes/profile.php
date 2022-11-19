@@ -17,9 +17,54 @@
 
         <!--  Main Tag  -->
         <main>
-            <section class="tableaccountrecords">
+            <section class="tableprofile">
+                <h1>Create a Profile</h1>
+                <div class="table-profile">
+                        <form action="" method="POST" >
+                            <div class="formprofile">
+                            <div> 
+                                <input type="text" name="petname" >
+                                <span>Pet Name</span>
+                            </div>
+                            <div> 
+                                <input type="text" name="age" >
+                                <span>Age</span>
+                            </div>
+                            <div> 
+                                <input type="radio" name="male" id="male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="female" id="female">
+                                <label for="female">Female</label>
+                                <span>Sex</span>
+                            </div>
+                            <div>
+                                <input type="text" name="weight" >
+                                <span>Weight</span>
+                            </div>
+                            <div>
+                                <input type="text" name="owner" >
+                                <span>Owner's Name</span>
+                            </div>
+                            <div>
+                                <input type="text" name="phone" >
+                                <span>Phone</span>
+                            </div>
+                            <div>
+                                <input type="email" name="email">
+                                <span>Email</span>
+                            </div>
+                                <button name="saveprofile" type="submit" class="save">Save</button>
+                            </div>
+                        </form>
+                </div>
+            </section>
+
+
+
+            <!--  End of profile   -->
+            <section class="tableprofile">
                 <h1>List of Profiles</h1>
-                <div class="accountrecords">
+                <div class="table-profile">
                         <table class="content-table">
                             <thead>
                                 <tr>
@@ -62,14 +107,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                </div>
-            </section>
-            <!--  End of table useraccount   -->
-            <section class="tableaccountrecords">
-                <h1>Create Profile</h1>
-                <div class="accountrecords">
-                       
-                    
                 </div>
             </section>
         </main>

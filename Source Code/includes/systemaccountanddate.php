@@ -27,7 +27,7 @@
                        <?php  
                        date_default_timezone_set( 'Asia/Manila' );  
                        echo "<br>Today is " . 
-                       date("M d, Y \n l, h:i:sA ") . 
+                       date("M d, Y \n l,h:i:sA ") . 
                        "<br>Have a great day! :)";
                        ?>
                 </div>
