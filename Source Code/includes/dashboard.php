@@ -27,7 +27,6 @@
     // }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +37,7 @@
     <!-- Materical Icons Link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
     <div class="container">

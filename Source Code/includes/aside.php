@@ -22,19 +22,15 @@
                     <span class="material-symbols-sharp">pets</span>
                     <h3>Profile</h3>
                 </a>
-                <a href="#">
+                <a href="stockandaddstock.php">
                     <span class="material-symbols-sharp">inventory</span>
-                    <h3>Stock</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">inventory_2</span>
-                    <h3>Add Stock</h3>
+                    <h3>Stock / Add Stock</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-sharp">medical_information</span>
                     <h3>Products and Services</h3>
                 </a>
-                <a href="#">
+                <a href="audittrail.php">
                     <span class="material-symbols-sharp">find_in_page</span>
                     <h3>Audit Trail</h3>
                 </a>
