@@ -138,8 +138,9 @@
                             <div>
                                 <input type="text" name="loginname">
                                 <span>Loginname</span>
-                            </div>
+                            <div class="buttonflex">
                                 <button name="saveprofile" type="submit" class="save">Save</button>
+                                <button name="saveprofile" type="submit" class="cancel">Cancel</button>
                             </div>
                         </form>
                     </div>
@@ -150,18 +151,18 @@
         <!--  End of Main Tag  -->
 
         <?php  include 'systemaccountanddate.php'; ?>
-
-        <h1>Retrieve Profile</h1>
+        <!--  Start of Retrieve section  -->
+        <h1>Retrieve Account</h1>
         <div class="buttons">
             <div class="buttonmodify">
                 <button class="modal-open" data-modal="modal4"><span class="material-symbols-sharp">table_view</span>View Archive</button> 
             </div>
         </div>
         <!-- Start of Modal --> 
-        <!-- Modal of Edit Profile -->
+        <!-- Modal of Edit Account -->
         <div class="modal" id="modal1">
             <div class="modal-content">
-                <div class="modal-header"><h1>Edit Profile</h1>
+                <div class="modal-header"><h1>Edit Account</h1>
                     <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
                 </div>
                 <div class="modal-body">
@@ -188,6 +189,7 @@
                             <div class="cbo-usertype">
                                 <span class="material-symbols-sharp markdown-editprofile">expand_more</span>
                                 <select name="usertype" id="ut" >
+                                <option value="Choose">Choose...</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Secretary">Secretary</option> 
                                 <option value="Secretary">Animal Handler</option>    
@@ -204,8 +206,8 @@
                 </div>
                     <div class="modal-footer">
                         <div class="buttonflex">
+                            <button name="updateaccount" type="submit" class="savechanges">Save Changes</button>
                             <button type="submit" class="cancel modal-close">Cancel</button>
-                            <button name="updateprofile" type="submit" class="savechanges">Save Changes</button>
                         </div>
                     </div>
                 </div>
@@ -221,7 +223,7 @@
                     <div class="modal-footer">
                         <div class="buttonflex">
                             <button name="savearchiveaccount" type="submit" class="yes">Yes</button>
-                            <button name="updateprofile" type="submit" class="cancel no modal-close">No</button>
+                            <button type="submit" class="cancel no modal-close">No</button>
                         </div>
                     </div>
                 </div>
@@ -237,7 +239,7 @@
                     <div class="modal-footer">
                         <div class="buttonflex">
                             <button name="savearchiveaccount" type="submit" class="yes">Yes</button>
-                            <button name="updateprofile" type="submit" class="cancel no modal-close">No</button>
+                            <button type="submit" class="cancel no modal-close">No</button>
                         </div>
                     </div>
                 </div>
@@ -311,8 +313,8 @@
                 </div>
                     <div class="modal-footer">
                         <div class="buttonflex">
-                            <button type="submit" class="cancel modal-close">Cancel</button>
                             <button name="updateprofile" type="submit" class="savechanges">Restore</button>
+                            <button type="submit" class="cancel modal-close">Cancel</button>
                         </div>
                     </div>
                 </div>

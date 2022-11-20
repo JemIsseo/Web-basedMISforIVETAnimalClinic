@@ -9,8 +9,8 @@
     --color-warning: #f3e13c;
     --color-white: #fff;
     --color-info-dark: #3e4a4d;;
-    --color-input-light: rgb(255, 255, 255);
-    --color-info-light: #eaedf3;
+    --color-input-light: rgb(255, 255, 255); 
+    --color-info-light: #e3e7f0;
     --color-gray: #677381;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
@@ -116,6 +116,8 @@ small {
     font-size: 0.75rem;
 }
 
+
+/*   Style for Icon Buttons   */
 .edit, 
 .archive,
 .restore {
@@ -282,7 +284,8 @@ main {
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
     background: var(--color-input-light);
-    margin: 0 3em;
+    margin: 0 10em;
+    margin-right: 3em;
     color: var(--color-primary);
     font-weight: bold;
     text-align: center;
@@ -296,6 +299,10 @@ main {
     position: fixed;
     right: 41%;
     color: var(--color-primary);
+}
+
+.buttonflex {
+    text-align: right;
 }
 
 .markdown-editprofile {
@@ -336,10 +343,7 @@ main {
     border: 2px solid var(--color-primary);
     width: 15vw;
     border-radius: 5px;
-    background: var(--color-white);
-}
-
-::placeholder {
+    background: var(--color-input-light);
     color: var(--color-dark);
 }
 
@@ -571,7 +575,7 @@ main {
 .modal-content {
     background: var(--color-white);
     margin-top: 100px;
-    width: 61%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     padding: 8px 24px;
@@ -647,7 +651,7 @@ main {
 
 
 .buttonflex {
-    text-align: right;
+    margin-top: 1em;
 }
 
 /*  Media Queries  */

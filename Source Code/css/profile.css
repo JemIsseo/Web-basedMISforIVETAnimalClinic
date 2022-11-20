@@ -9,13 +9,16 @@
     --color-warning: #f3e13c;
     --color-white: #fff;
     --color-info-dark: #49666b;;
-    --color-info-light: #dce1eb;
+    --color-info-light: #e3e7f0;
+    --color-gray: #677381;
     --color-dark: rgb(20, 17, 17);
     --color-light: rgba(132, 139, 200, 0.18);
-    --color-info-light: #dce1eb;
+    --color-input-light: rgb(255, 255, 255);
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
+    --color-light-blue: #3b9ae7;
+    --color-light-red: #f59494;
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -43,9 +46,7 @@
 
 
 /* General Properties */
-*, 
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -150,6 +151,24 @@ b {
     color: var(--color-primary-variant);
 }
 
+
+/*   Style for Icon Buttons   */
+.edit, 
+.archive,
+.restore {
+    color: var(--color-success);
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.archive {
+    color: var(--color-primary);
+}
+
+.restore {
+    color: var(--color-warning);
+}
+
 aside {
     height: 100vh;
     position: block;
@@ -248,6 +267,11 @@ aside .sidebar a:hover span {
     text-align: center;
 }
 
+.markdown {
+    color: var(--color-primary);
+    margin-left: 8.5em;
+}
+
 .formprofile span {
     position: absolute;
 }
@@ -272,14 +296,18 @@ aside .sidebar a:hover span {
 /*  Table Transaction  */
 .content-table {
     border-collapse: collapse;
-    font-size: 1em;
+    font-size: .90em;
     width: 100%;
+    display: block;
+    height: 250px;
+    overflow: auto;
+    text-align: center;
 }
 
 .content-table thead tr {
     background-color: var(--color-primary);
     color: var(--color-background);
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -295,8 +323,181 @@ aside .sidebar a:hover span {
 
 .content-table th,
 .content-table td {
-    padding: 12px 15px;
+    padding: 8px 5px;
     border-bottom: 1px solid rgb(238, 233, 233);
+}
+
+
+.table-archive th, 
+.table-archive td {
+    padding: 12px 27px;
+}
+
+
+.searchbar span {
+    color: var(--color-primary);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+    background: var(--color-white);
+    height: 43vh;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    margin: 1em;
+}
+
+.buttons:hover {
+    box-shadow: none;
+}
+
+.buttonmodify button {
+    background: linear-gradient(to right bottom, rgb(71, 189, 216),var(--color-primary));
+    color: var(--color-white);
+    padding: 2em;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    gap: 1.3em;
+    width: 220px;
+    margin: 2em auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    box-shadow: 0 0 50rem var(--color-dark);
+}
+
+.modal-content {
+    background: var(--color-white);
+    margin-top: 100px;
+    width: 61%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    border-radius: 10px;
+    z-index: 4;
+}
+
+.modal-header {
+    display: flex;
+}
+
+.modal-header .modal-close {
+    margin-left: 77%;
+    background: transparent;
+}
+
+.modal-header .modal-close span{
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 1em 0;
+}
+
+.modal-footer {
+    padding: 1em;
+}
+
+.modal-footer .modal-close {
+    padding: .5em 1em;
+}
+
+#modal2 .modal-content {
+    width: 40%;
+}
+
+
+#modal2 .modal-body {
+    padding: 2em;
+}
+
+#modal2 .modal-header .modal-close {
+    margin-left: 50%;
+}
+
+#modal4 .modal-content {
+    width: 80%;
+}
+
+#modal4 .modal-header {
+    padding: 1em;
+    display: flex;
+    gap: 30em;
+}
+
+#modal3 {
+    z-index: 10;
+}
+
+#modal3 .modal-content {
+    width: 45%;
+}
+
+
+#modal3 .modal-body {
+    padding: 2em;
+}
+
+#modal3 .modal-header .modal-close {
+    margin-left: 50%;
+}
+
+
+.buttonflex {
+    margin: 0 auto;
+}
+
+.buttonflexright {
+    text-align: right;
+}
+
+/* Searchbar Style */
+.accrecsearch {
+    display: flex;
+    gap: 22em;
+}
+
+.searchbar {
+    display: flex;
+    gap: .5em;
+    margin: .4em;
+}
+
+.profilepicture input {
+    background: rgb(163, 158, 158);
+    border: 1px solid var(--color-primary);
+    width: 14vw;
+    border-radius: 4px;
+}
+
+.searchbar input {
+    padding: .3em;
+    font-family: inherit;
+    border: 2px solid var(--color-primary);
+    width: 15vw;
+    border-radius: 5px;
+    background: var(--color-input-light);
+    color: var(--color-gray);
+}
+
+.searchbar span {
+    color: var(--color-primary);
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* Start of Right */
@@ -393,6 +594,40 @@ aside .sidebar a:hover span {
     font-size: var(--fs-text1);
     font-weight: bolder;
 }
+
+
+/* Color of Buttons */
+.save, 
+.savechanges,
+.yes, 
+.no,
+.cancel {
+    border: 2px solid var(--color-info-light);  
+    width: 8vw;
+    color: var(--color-white);
+    background: var(--color-success);
+    padding: .5em;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.savechanges {
+    background: var(--color-success);  
+}
+
+.cancel {
+    background: var(--color-gray);
+}
+
+.yes {
+    background: var(--color-light-blue);
+}
+
+.no {
+    background: var(--color-light-red);
+}
+
 
 
 /*  Media Queries  */
