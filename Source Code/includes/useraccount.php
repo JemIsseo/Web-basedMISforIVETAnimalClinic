@@ -49,8 +49,8 @@
                                     <td>Administrator</td>
                                     <td>admin123</td>
                                     <td>
-                                    <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button> 
+                                    <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit" title="Edit this account">edit</span></button>
+                                    <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive this record">archive</span></button> 
                                     </td> 
                                 </tr>
                                 <tr>
@@ -59,10 +59,10 @@
                                             <img src="../images/profile-1.jpg" alt="User Photo">
                                         </div>
                                     </td>
-                                    <td>sec</td>
-                                    <td>****</td>
-                                    <td>Secretary</td>
-                                    <td>secretary_321</td>
+                                    <td>JemLeaves</td>
+                                    <td>***********</td>
+                                    <td>Animal Handler</td>
+                                    <td>jemisseo</td>
                                     <td>
                                     <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
                                     <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
@@ -111,24 +111,25 @@
                         <form action="" method="POST" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>
-                                <input type="file" name"profile">
+                                <input type="file" name"profile" title="Insert photo...">
                             </div> 
                             <div class="formprofile">
                             <div> 
-                                <input type="text" name="username" >
+                                <input type="text" name="username" placeholder="Enter Username" >
                                 <span>Username</span>
                             </div>
                             <div>
-                                <input type="password" name="password" >
+                                <input type="password" name="password" placeholder="Enter Password">
                                 <span>Password</span>
                             </div>
                             <div>
-                                <input type="password" name="cpassword" >
+                                <input type="password" name="cpassword" placeholder="Enter Confirm Password">
                                 <span>Confirm Password</span>
                             </div>
                             <div>
                                 <span class="material-symbols-sharp markdown">expand_more</span>
                                 <select name="usertype" id="ut" >
+                                <option value="Choose">Choose...</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Secretary">Secretary</option>    
                                 <option value="Secretary">Animal Handler</option> 
@@ -136,11 +137,11 @@
                                 <span>Usertype</span>
                             </div>
                             <div>
-                                <input type="text" name="loginname">
+                                <input type="text" name="loginname" placeholder="Enter Loginname">
                                 <span>Loginname</span>
                             <div class="buttonflex">
-                                <button name="saveprofile" type="submit" class="save">Save</button>
-                                <button name="saveprofile" type="submit" class="cancel">Cancel</button>
+                                <button name="saveprofile" type="submit" class="save" title="Save the record">Save</button>
+                                <button name="saveprofile" type="submit" class="cancel" title="Clear all inputs">Clear</button>
                             </div>
                         </form>
                     </div>
@@ -155,7 +156,7 @@
         <h1>Retrieve Account</h1>
         <div class="buttons">
             <div class="buttonmodify">
-                <button class="modal-open" data-modal="modal4"><span class="material-symbols-sharp">table_view</span>View Archive</button> 
+                <button class="modal-open" data-modal="modal4" title="View and Restore Account"><span class="material-symbols-sharp">table_view</span>View Archive</button> 
             </div>
         </div>
         <!-- Start of Modal --> 
@@ -197,7 +198,7 @@
                                 <span>Usertype</span>
                             </div>
                                 <div>
-                                    <input type="text" name="loginname">
+                                    <input type="text" name="loginname" >
                                     <span>Loginname</span>
                                 </div>
                             </div>
@@ -206,8 +207,8 @@
                 </div>
                     <div class="modal-footer">
                         <div class="buttonflex">
-                            <button name="updateaccount" type="submit" class="savechanges">Save Changes</button>
-                            <button type="submit" class="cancel modal-close">Cancel</button>
+                            <button name="updateaccount" type="submit" class="savechanges" title="Save Changes in Record">Save Changes</button>
+                            <button type="submit" class="cancel modal-close" title="Cancel">Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -281,12 +282,12 @@
                                         </div>
                                     </td>
                                     <td>admin</td>
-                                    <td>***</td>
+                                    <td>*******</td>
                                     <td>Administrator</td>
-                                    <td>admin123</td>
+                                    <td>Iamlegend</td>
                                     <td>
                                     <button class="modal-open" data-modal="modal3" name="restoreaccount">
-                                        <span class="material-symbols-sharp restore">unarchive</span>
+                                        <span class="material-symbols-sharp restore" title="Unarchiving">unarchive</span>
                                     </button> 
                                     </td> 
                                 </tr>
@@ -302,7 +303,7 @@
                                     <td>secretary_321</td>
                                     <td>
                                     <button class="modal-open" data-modal="modal3" name="restoreaccount">
-                                        <span class="material-symbols-sharp restore">unarchive</span>
+                                        <span class="material-symbols-sharp restore" title="Unarchiving">unarchive</span>
                                     </button>
                                     </td>
                                 </tr>
@@ -313,8 +314,8 @@
                 </div>
                     <div class="modal-footer">
                         <div class="buttonflex">
-                            <button name="updateprofile" type="submit" class="savechanges">Restore</button>
-                            <button type="submit" class="cancel modal-close">Cancel</button>
+                            <button name="updateprofile" type="submit" class="savechanges" title="Restore Record">Restore</button>
+                            <button class="cancel modal-close" title="Cancel">Cancel</button>
                         </div>
                     </div>
                 </div>

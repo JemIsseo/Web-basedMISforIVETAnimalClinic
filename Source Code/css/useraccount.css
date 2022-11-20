@@ -286,9 +286,15 @@ main {
     background: var(--color-input-light);
     margin: 0 10em;
     margin-right: 3em;
-    color: var(--color-primary);
+    color: var(--color-gray);
     font-weight: bold;
     text-align: center;
+}
+
+::placeholder {
+    text-align: left;
+    padding: 2em;
+    opacity: .70;
 }
 
 .formprofile span {
@@ -428,7 +434,7 @@ main {
 .content-table th,
 .content-table td {
     text-align: center;
-    padding: 12px 27px;
+    padding: 12px 26px;
     border-bottom: 1px solid rgb(238, 233, 233);
 }
 

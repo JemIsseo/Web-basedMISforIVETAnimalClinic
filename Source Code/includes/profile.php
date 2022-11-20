@@ -23,11 +23,11 @@
                     <form action="" method="POST" >
                         <div class="formprofile">
                             <div> 
-                                <input type="text" name="petname" >
+                                <input type="text" name="petname" placeholder="Enter Pet Name" >
                                 <span>Pet Name</span>
                             </div>
                             <div> 
-                                <input type="text" name="age" >
+                                <input type="text" name="age" placeholder="Enter Pet Age" >
                                 <span>Age</span>
                             </div>
                             <div> 
@@ -40,24 +40,24 @@
                                 <span>Sex</span>
                             </div>
                             <div>
-                                <input type="text" name="weight" >
+                                <input type="text" name="weight" placeholder="Enter Pet Weight" >
                                 <span>Weight (Kg)</span>
                             </div>
                             <div>
-                                <input type="text" name="owner" >
+                                <input type="text" name="owner" placeholder="Enter Owner's Name" >
                                 <span>Owner's Name</span>
                             </div>
                             <div>
-                                <input type="text" name="phone" >
+                                <input type="text" name="phone" placeholder="Enter Phone No." >
                                 <span>Phone</span>
                             </div>
                             <div>
-                                <input type="email" name="email">
+                                <input type="email" name="email" placeholder="Enter Email">
                                 <span>Email</span>
                             </div>
                             <div class="buttonflex">
-                                <button name="saveprofile" type="submit" class="save">Save</button>
-                                <button name="saveprofile" type="submit" class="cancel">Clear</button>
+                                <button name="saveprofile" type="submit" class="save" title="Save the record">Save</button>
+                                <button name="saveprofile" type="submit" class="cancel" title="Clear all inputs">Clear</button>
                             </div>
                         </div>
                     </form>
@@ -98,8 +98,8 @@
                                     <td>09345678821</td>
                                     <td>CruzIrene@gmail.com</td>
                                     <td>
-                                    <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button>
+                                    <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit" title="Edit this profile">edit</span></button>
+                                    <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive the record">archive</span></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -170,7 +170,7 @@
         <h1>Retrieve Profile</h1>
         <div class="buttons">
             <div class="buttonmodify">
-                <button class="modal-open" data-modal="modal4"><span class="material-symbols-sharp">table_view</span>View Archive Profile</button> 
+                <button class="modal-open" data-modal="modal4" title="View and Restore Record"><span class="material-symbols-sharp">table_view</span>View Archive Profile</button> 
             </div>
         </div>
         
@@ -228,8 +228,8 @@
                 </div>
                     <div class="modal-footer">
                         <div class="buttonflexright">
-                            <button name="updateprofile" type="submit" class="savechanges">Save Changes</button>
-                            <button type="submit" class="cancel modal-close">Cancel</button>
+                            <button name="updateprofile" type="submit" class="savechanges" title="Save Record">Save Changes</button>
+                            <button type="submit" class="cancel modal-close" title="Cancel">Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -309,7 +309,7 @@
                                     <td>CruzIrene@gmail.com</td>
                                     <td>
                                     <button class="modal-open" data-modal="modal3" name="restoreprofile">
-                                        <span class="material-symbols-sharp restore">unarchive</span>
+                                        <span class="material-symbols-sharp restore" title="Unarchiving">unarchive</span>
                                     </button> 
                                     </td>
                                 </tr>
@@ -324,7 +324,7 @@
                                     <td>StephCorpuz@gmail.com</td>
                                     <td>
                                     <button class="modal-open" data-modal="modal3" name="restoreprofile">
-                                        <span class="material-symbols-sharp restore">unarchive</span>
+                                        <span class="material-symbols-sharp restore" title="Unarchiving">unarchive</span>
                                     </button> 
                                     </td>
                                 </tr>
@@ -334,8 +334,8 @@
             </section>
                     <div class="modal-footer">
                         <div class="buttonflexright">
-                            <button name="updateprofile" type="submit" class="savechanges">Restore</button>
-                            <button type="submit" class="cancel modal-close">Cancel</button>
+                            <button name="updateprofile" type="submit" class="savechanges" title="Restore the record">Restore</button>
+                            <button type="submit" class="cancel modal-close" title="Cancel">Cancel</button>
                         </div>
                     </div>
 

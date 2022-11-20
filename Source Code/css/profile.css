@@ -262,9 +262,19 @@ aside .sidebar a:hover span {
     box-shadow: var(--box-shadow);
     background: var(--color-input-light);
     margin: 0 2em;
-    color: var(--color-primary);
+    color: var(--color-gray);
     font-weight: bold;
     text-align: center;
+}
+
+::placeholder {
+    text-align: left;
+    padding: 3em;
+    opacity: .70;
+}
+
+.ut {
+    opacity: .70;
 }
 
 .markdown {
