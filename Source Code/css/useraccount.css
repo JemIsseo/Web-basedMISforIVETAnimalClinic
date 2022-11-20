@@ -141,6 +141,10 @@ small {
     overflow: hidden;
 }
 
+.profile-photo button {
+    cursor: pointer;
+}
+
 .text-muted {
     color: var(--color-info-dark);
 }
@@ -515,10 +519,12 @@ main {
     background: var(--color-white);
     padding: 1em;
     height: 25vh;
+    font-size: 18px;
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
-    margin: 1em;
+    letter-spacing: .16em;
+    margin: 1em auto;
 }
 
 .datetoday span {
@@ -613,6 +619,21 @@ main {
 
 .modal-footer .modal-close {
     padding: .5em 1em;
+}
+
+#modal0 .modal-close {
+    margin-left: 53%;
+}
+
+#modal0 .modal-body img {
+    height: 25rem;
+    width: 20rem;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+}
+
+#modal0 .modal-content {
+    width: 40%;
 }
 
 #modal2 .modal-content {

@@ -41,7 +41,7 @@
                                 <tr>
                                     <td>
                                         <div class="profile-photo">
-                                            <img src="../images/petcare.png" alt="User Photo">
+                                            <button class="modal-open" data-modal="modal0"><img src="../images/profile-2.png" alt="User Photo"></button>
                                         </div>
                                     </td>
                                     <td>admin</td>
@@ -56,7 +56,7 @@
                                 <tr>
                                     <td>
                                         <div class="profile-photo">
-                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                            <img src="../images/profile-3.jpeg" alt="User Photo">
                                         </div>
                                     </td>
                                     <td>JemLeaves</td>
@@ -71,7 +71,7 @@
                                 <tr>
                                     <td>
                                         <div class="profile-photo">
-                                            <img src="../images/profile-1.jpg" alt="User Photo">
+                                            <img src="../images/profile-4.jpg" alt="User Photo">
                                         </div>
                                     </td>
                                     <td>sec</td>
@@ -161,6 +161,22 @@
         </div>
         <!-- Start of Modal --> 
         <!-- Modal of Edit Account -->
+        <div class="modal" id="modal0">
+            <div class="modal-content">
+                <div class="modal-header"><h1>Account Photo</h1>
+                    <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../images/profile-2.png" alt="Account Photo">
+                </div>
+                    <div class="modal-footer">
+                        <div class="buttonflex">
+                            <button type="submit" class="cancel modal-close">Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="modal" id="modal1">
             <div class="modal-content">
                 <div class="modal-header"><h1>Edit Account</h1>
