@@ -204,16 +204,17 @@
                                 </select>
                                 <span>Sex</span>
                             </div>
-                            <div>
-                                <input type="text" name="weight" >
-                                <span>Weight</span>
-                            </div>
+                          
                             <div>
                                 <input type="text" name="owner" >
                                 <span>Owner's Name</span>
                             </div>
                             <div>
-                                <input type="text" name="phone" >
+                                <input type="text" name="weight" >
+                                <span>Weight</span>
+                            </div>
+                            <div>
+                                <input type="email" name="phone" >
                                 <span>Phone</span>
                             </div>
                             <div>
@@ -334,7 +335,6 @@
             </section>
                     <div class="modal-footer">
                         <div class="buttonflexright">
-                            <button name="updateprofile" type="submit" class="savechanges" title="Restore the record">Restore</button>
                             <button type="submit" class="cancel modal-close" title="Cancel">Cancel</button>
                         </div>
                     </div>

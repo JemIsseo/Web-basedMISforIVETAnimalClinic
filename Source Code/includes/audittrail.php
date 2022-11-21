@@ -38,111 +38,75 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>wadwadwagwiuwagd</td>
+                                    <td>11/25/22 8:35</td>
+                                    <td>Mimi</td>
+                                    <td>Logged in</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Malewdwadagdwaiudgwada</td>
+                                    <td>2</td>
+                                    <td>11/25/22 10:54</td>
+                                    <td>Yoru</td>
+                                    <td>Logged in</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
                                     <td>3</td>
-                                    <td>wadiwahdwaigwau</td>
+                                    <td>11/26/22 4:46</td>
+                                    <td>Jake</td>
+                                    <td>Logged out</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>adiwahdwaiudgwauigwau</td>
+                                    <td>4</td>
+                                    <td>11/27/22 6:50</td>
+                                    <td>Ben</td>
+                                    <td>Added stock Quantity</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>wadihwaduwagdwauiwdag</td>
+                                    <td>5</td>
+                                    <td>11/27/22 6:50</td>
+                                    <td>Yoru</td>
+                                    <td>Edited a customer profile</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>awdwgawdgyfdwydfwauyfwa</td>
+                                    <td>6</td>
+                                    <td>11/27/22 3:32</td>
+                                    <td>Mimi</td>
+                                    <td>Logged out</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
+                                    <td>7</td>
+                                    <td>11/30/22 3:32</td>
+                                    <td>Ben</td>
+                                    <td>Edited stock quantity</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
+                                    <td>8</td>
+                                    <td>11/30/22 5:30</td>
+                                    <td>Ben</td>
+                                    <td>Logged out</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
+                                    <td>9</td>
+                                    <td>11/30/22 6:50</td>
+                                    <td>Yoru</td>
+                                    <td>Edited a customer profile</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
+                                    <td>10</td>
+                                    <td>11/30/22 8:40</td>
+                                    <td>Yoru</td>
+                                    <td>Logged out</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
+                                    <td>11</td>
+                                    <td>11/30/22 10:32</td>
+                                    <td>Jake</td>
+                                    <td>Restored account</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
+                                    <td>12</td>
+                                    <td>12/2/22 3:32</td>
+                                    <td>Mimi</td>
+                                    <td>Edited a profile</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>

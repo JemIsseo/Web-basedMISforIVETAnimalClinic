@@ -330,7 +330,6 @@
                 </div>
                     <div class="modal-footer">
                         <div class="buttonflex">
-                            <button name="updateprofile" type="submit" class="savechanges" title="Restore Record">Restore</button>
                             <button class="cancel modal-close" title="Cancel">Cancel</button>
                         </div>
                     </div>
