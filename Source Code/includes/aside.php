@@ -26,7 +26,7 @@
                     <span class="material-symbols-sharp">inventory</span>
                     <h3>Stock / Add Stock</h3>
                 </a>
-                <a href="#">
+                <a href="productsandservices.php">
                     <span class="material-symbols-sharp">medical_information</span>
                     <h3>Products and Services</h3>
                 </a>
@@ -42,7 +42,7 @@
                     <span class="material-symbols-sharp">settings</span>
                     <h3>Settings</h3>
                 </a>
-                <a href="index.php">
+                <a href="loginform.php">
                     <span class="material-symbols-sharp">logout</span>
                     <h3>Logout</h3>
                 </a>

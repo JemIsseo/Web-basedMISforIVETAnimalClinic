@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock</title>
+    <title>Stock and Add Stock</title>
     <!-- Materical Icons Link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Stylesheet  -->
@@ -83,8 +83,8 @@
                                     <td>rawdwadwadwawawaadwadwaadwadwawawawawadwadwaiption</td>
                                     <td>150</th>
                                     <td>
-                                    <button class="modal-open" name="savechanges" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button class="modal-open" name="archiveaccount" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button>
+                                    <button class="modal-open" name="savechanges" data-modal="modal1" title="Edit this record"><span class="material-symbols-sharp edit" >edit</span></button>
+                                    <button class="modal-open" name="archiveaccount" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive this record">archive</span></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -107,21 +107,26 @@
         <!--  End of Main Tag  -->
         <?php   include 'systemaccountanddate.php'; ?>
         <!--  Start of Retrive section  -->
-        <h2>View and Refresh Stock</h1>
+        <div class="rightbottom">
+        <h3>View, Restore and Refresh Stock</h3>
         <div class="buttons">
             <div class="buttonmodify">
-                <button class="modal-open" data-modal="modal4" title="View Stocks"><span class="material-symbols-sharp">inventory_2</span>View Stocks</button> 
+                <button class="modal-open" data-modal="modal5" title="View Stocks"><span class="material-symbols-sharp">inventory_2</span>View Stocks</button> 
+            </div> 
+            <div class="buttonmodify">
+                <button title="Restore archive stock" class="modal-open" data-modal="modal4"><span class="material-symbols-sharp">unarchive</span>Restore Stocks</button> 
             </div>
             <div class="buttonmodify">
                 <button title="Refresh stock"><span class="material-symbols-sharp">refresh</span>Refresh Stocks</button> 
             </div>
+        </div>
         </div>
         
         <!-- Start of Modal --> 
         <!-- Modal of Edit Stock -->
         <div class="modal" id="modal1">
             <div class="modal-content">
-                <div class="modal-header"><h1>Edit Profile</h1>
+                <div class="modal-header"><h1>Edit Stock</h1>
                     <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
                 </div>
                     <div class="modal-body">
@@ -130,7 +135,7 @@
                             <div class="table-profile">
                         <form action="" method="POST" >
                             <div class="formprofile">
-                                <div> 
+                                <div>   
                                     <input type="text" name="petname" placeholder="Enter Item Name" >
                                     <span>Item Name</span>
                                 </div>
@@ -201,11 +206,11 @@
                 </div>
             </div>
         </div>
-        <!-- Modal of Restore Stock -->
+        <!-- Modal of View Stock -->
         <div class="modal" id="modal4">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1>View Stocks</h1>
+                    <h1>Restore Stocks</h1>
                     <div class="accrecsearch">
                         <div class="searchbar">
                         <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
@@ -244,6 +249,76 @@
                                     <td>waonrawdwadwadwawawaadwadwaadwadwawawawawadwaidiptonn</td>
                                     <td>Quantity</td>
                                     <td><button class="modal-open" name="restorestock" data-modal="modal3"><span class="material-symbols-sharp restore">unarchive</span></button></td>
+                                </tr>
+                                <tr>
+                                    <td>Stock ID</td>
+                                    <td>Item Name</th>
+                                    <td>Category</td>
+                                    <td>waonrawdwadwadwawawaadwadwaadwadwawawawawadwaidiptonn</td>
+                                    <td>Quantity</td>
+                                    <td><button class="modal-open" name="restorestock" data-modal="modal3"><span class="material-symbols-sharp restore">unarchive</span></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </section>
+                    <div class="modal-footer">
+                        <div class="buttonflexright">
+                            <button type="submit" class="cancel modal-close" title="Cancel">Cancel</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal of View Stock -->
+        <div class="modal" id="modal5">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>View Stocks</h1>
+                    <div class="accrecsearch">
+                        <div class="searchbar">
+                        <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
+                        <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                        </div>
+                    </div>
+                </div> 
+                   
+                <div class="modal-body">
+                    <section class="tableprofile">
+                    <div class="table-profile">
+                        <table class="content-table table-archive">
+                            <thead>
+                                <tr>
+                                    <th>Stock ID</th>
+                                    <th>Item Name</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>       </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stock ID</td>
+                                    <td>Item Name</td>
+                                    <td>Category</td>
+                                    <td>waonrawdwadwadwawawaadwadwaadwadwawawawawadwaidipton</td>
+                                    <td>Quantity</th>
+                                </tr>
+                                <tr>
+                                    <td>Stock ID</td>
+                                    <td>Item Name</th>
+                                    <td>Category</td>
+                                    <td>waonrawdwadwadwawawaadwadwaadwadwawawawawadwaidiptonn</td>
+                                    <td>Quantity</td>
+                                </tr>
+                                <tr>
+                                    <td>Stock ID</td>
+                                    <td>Item Name</th>
+                                    <td>Category</td>
+                                    <td>waonrawdwadwadwawawaadwadwaadwadwawawawawadwaidiptonn</td>
+                                    <td>Quantity</td>
                                 </tr>
                             </tbody>
                         </table>
