@@ -34,11 +34,11 @@
                     <span class="material-symbols-sharp">find_in_page</span>
                     <h3>Audit Trail</h3>
                 </a>
-                <a href="#">
+                <a href="reports.php">
                     <span class="material-symbols-sharp">report</span>
                     <h3>Reports</h3>
                 </a>
-                <a href="#">
+                <a href="settings.php">
                     <span class="material-symbols-sharp">settings</span>
                     <h3>Settings</h3>
                 </a>

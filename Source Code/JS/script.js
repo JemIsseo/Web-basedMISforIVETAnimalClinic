@@ -59,6 +59,7 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 
+
 // const modal = document.querySelector('.modal');
 // const hideIcon = document.querySelector('#hideIcon');
 // const hideButton = document.querySelector('#hideButton');

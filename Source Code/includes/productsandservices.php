@@ -144,12 +144,17 @@
         <?php   include 'systemaccountanddate.php'; ?>
         <!--  Start of Retrive section  -->
         <div class="schedule">
+                <div class="schedule-header">
                 <h2>Services Offer</h2>
+                  <div class="buttonmodify">
+                     <button class="modal-open" data-modal="modal3" title="Check transaction history"><span class="material-symbols-sharp">history</span><h3>History</h3></button> 
+                 </div>
+                </div>
                 <div class="schedinfo">
                         <table class="content-table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>SID</th>
                                     <th>Service</th>
                                     <th>Price</th>
                                     <th>  </th>
@@ -209,7 +214,7 @@
                         <div class="buttonflex">
                                 <button name="saveprofile" type="submit" class="save" title="Proceed to save">Save</button>
                                 <button name="saveprofile" type="submit" class="cancel" title="Clear checked services">Clear</button>
-                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -288,7 +293,7 @@
                 <div class="modal-header"><h1>Unarchive Stock</h1>
                     <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
                 </div>
-                <div class="modal-body"><h3>Are you sure you want to restore this record?</h3></div>
+                <div class="modal-body"><h3>THIS IS TABLE TRANSACTION HISTORY</h3></div>
                     <div class="modal-footer">
                         <div class="buttonflexright">
                             <button name="savearchiveprofile" type="submit" class="yes">Yes</button>
