@@ -57,22 +57,3 @@ darkModeToggle.addEventListener('click', () => {
     darkModeToggle.querySelector('span:nth-child(2)').classList.toggle('active');
     darkModeToggle.querySelector('span:nth-child(1)').classList.toggle('active');
 });
-
-
-
-// const modal = document.querySelector('.modal');
-// const hideIcon = document.querySelector('#hideIcon');
-// const hideButton = document.querySelector('#hideButton');
-// const showButton = document.querySelector('#showButton');
-
-// hideIcon.addEventListener('click', hideModal);
-// hideButton.addEventListener('click', hideModal);
-// showButton.addEventListener('click', showModal);
-
-// function hideModal() {
-//     modal.id = 'hide';
-// }
-
-// function showModal() {
-//     modal.id = 'show';
-// }
