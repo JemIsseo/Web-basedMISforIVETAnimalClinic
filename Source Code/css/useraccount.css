@@ -403,11 +403,23 @@ main {
 }
 
 .profilepicture span {
-    font-size: 190px;
+    font-size: 167px;
     color: var(--color-primary);
     background: var(--color-info-light);
     border-radius: 50%;
     box-shadow: var(--box-shadow);
+}
+
+.uploadbtn {
+    border: 2px solid var(--color-info-light);  
+    width: 5vw;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: .3em;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3.5em;
 }
 
 /*  Table User Account  */
@@ -440,7 +452,7 @@ main {
 .content-table th,
 .content-table td {
     text-align: center;
-    padding: 12px 26px;
+    padding: 12px 27px;
     border-bottom: 1px solid rgb(238, 233, 233);
 }
 

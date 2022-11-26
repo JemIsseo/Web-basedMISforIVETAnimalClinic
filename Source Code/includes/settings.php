@@ -173,9 +173,9 @@
         <?php   include 'systemaccountanddate.php'; ?>
         <!--  Start of Retrive section  -->
         <div class="rightbottom">
-        <h3>Dark Theme</h3>
+        <h1>Dark Theme</h1>
             <div class="buttons">
-                <h2>Enable Dark Mode</h2>
+                <h2>Enable Dark Mode</h2><br>
                 <button id="dark-mode-toggle" class="theme-toggler">
                     <span class="material-symbols-sharp active">light_mode</span>
                     <span class="material-symbols-sharp ">dark_mode</span>

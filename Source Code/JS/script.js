@@ -4,8 +4,6 @@ const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
-
-
 // opening modals
 var modalBtns = document.querySelectorAll(".modal-open");
 
@@ -17,6 +15,7 @@ modalBtns.forEach(function(btn){
     };
 });
 
+// close modals
 var closeBtns =  document.querySelectorAll(".modal-close");
 closeBtns.forEach(function(btn){
     btn.onclick = function() {
@@ -32,6 +31,7 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 });  
+
 // change theme
 const enableDarkMode = () => {
     document.body.classList.add("darkmode");

@@ -1,7 +1,8 @@
+        
         <aside>
             <div class="top">
                 <div class="logo">
-                   <a href="#"><img src="../Images/ivet.png" alt="IVET Logo"></a>
+                   <a href="dashboard.php"><img src="../Images/ivet.png" alt="IVET Logo"></a>
                     <h2><span class="primary-variant">ANIMAL</span><span class="warning"> CLINIC</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -42,7 +43,7 @@
                     <span class="material-symbols-sharp">settings</span>
                     <h3>Settings</h3>
                 </a>
-                <a href="loginform.php">
+                <a href="loginform.php" class="modal-open" data-modal="modal6">
                     <span class="material-symbols-sharp">logout</span>
                     <h3>Logout</h3>
                 </a>

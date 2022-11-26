@@ -1,3 +1,27 @@
+<?php include 'connect.php'; 
+    if(isset($_POST['submit'])){
+    $pname = $_POST['petname'];
+    $age = $_POST['age'];
+    $utsex = $_POST['sex'];
+    $weight = $_POST['weight'];
+    $owner = $_POST['owner'];
+    $phone = $_POST['phone']; 
+    $email = $_POST['email'];
+
+    $sql = "insert into tblprofile(petname, age, sex, weight, ownername, phone, email) 
+            values('$pname','$age','$utsex','$weight','$owner','$phone','$email')";
+    $res = mysqli_query($conn,$sql);
+    if($res) {
+        header('location:profile.php');
+    } 
+    else {
+        die(mysqli_error($conn));
+    }
+}
+?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,35 +44,34 @@
             <section class="tableprofile">
                 <h1>Create a Profile</h1>
                 <div class="table-profile">
-                    <form action="" method="POST" >
+                    <form method="POST">
                         <div class="formprofile">
                             <div> 
-                                <input type="text" name="petname" placeholder="Enter Pet Name" >
+                                <input type="text" name="petname" placeholder="Enter Pet Name" required>
                                 <span>Pet Name</span>
                             </div>
                             <div> 
-                                <input type="text" name="age" placeholder="Enter Pet Age" >
+                                <input type="text" name="age" placeholder="Enter Pet Age" required>
                                 <span>Age</span>
                             </div>
                             <div> 
-                                <span class="material-symbols-sharp markdown">expand_more</span>
-                                <select name="usertype" id="ut" >
-                                <option value="Choose">Choose...</option>
-                                <option value="Admin">Male</option>
-                                <option value="Secretary">Female</option>    
-                                </select>
+                                <input type="text" name="sex" placeholder="Choose..." list="sex" required>
+                                <datalist id="sex">
+                                <option>Male</option>
+                                <option>Female</option>    
+                                </datalist>
                                 <span>Sex</span>
                             </div>
                             <div>
-                                <input type="text" name="weight" placeholder="Enter Pet Weight" >
+                                <input type="text" name="weight" placeholder="Enter Pet Weight" required>
                                 <span>Weight (Kg)</span>
                             </div>
                             <div>
-                                <input type="text" name="owner" placeholder="Enter Owner's Name" >
+                                <input type="text" name="owner" placeholder="Enter Owner's Name" required>
                                 <span>Owner's Name</span>
                             </div>
                             <div>
-                                <input type="text" name="phone" placeholder="Enter Phone No." >
+                                <input type="text" name="phone" placeholder="Enter Phone No." required>
                                 <span>Phone</span>
                             </div>
                             <div>
@@ -56,8 +79,8 @@
                                 <span>Email</span>
                             </div>
                             <div class="buttonflex">
-                                <button name="saveprofile" type="submit" class="save" title="Save the record">Save</button>
-                                <button name="saveprofile" type="submit" class="cancel" title="Clear all inputs">Clear</button>
+                                <button name="submit" type="submit" class="save" title="Save the record">Save</button>
+                                <button name="clear" class="cancel" title="Clear all inputs">Clear</button>
                             </div>
                         </div>
                     </form>
@@ -88,76 +111,37 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Choco</td>
-                                    <td>3</td>
-                                    <td>Male</td>
-                                    <td>15kg</td>
-                                    <td>Irene Cruz</td>
-                                    <td>09345678821</td>
-                                    <td>CruzIrene@gmail.com</td>
+                            <?php 
+                                $sql = "Select * from tblprofile";
+                                    $res= mysqli_query($conn,$sql);
+
+                                    if($res){
+                                    while($row=mysqli_fetch_assoc($res)){
+                                    $proid=$row['profileid'];
+                                    $pname=$row['petname'];
+                                    $age=$row['age'];
+                                    $utsex=$row['sex']; 
+                                    $weight=$row['weight'];
+                                    $owner=$row['ownername'];
+                                    $phone=$row['phone'];
+                                    $email=$row['email'];
+                                    echo '<tr>
+                                    <td>'.$proid.'</td>
+                                    <td>'.$pname.'</td>
+                                    <td>'.$age.'</td>
+                                    <td>'.$utsex.'</td>
+                                    <td>'.$weight.'</td>
+                                    <td>'.$owner.'</td>
+                                    <td>'.$phone.'</td>
+                                    <td>'.$email.'</td>
                                     <td>
                                     <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit" title="Edit this profile">edit</span></button>
                                     <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive the record">archive</span></button>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Brownie</td>
-                                    <td>5</td>
-                                    <td>Male</td>
-                                    <td>20kg</td>
-                                    <td>Stephanie Corpuz</td>
-                                    <td>09125568219</td>
-                                    <td>StephCorpuz@gmail.com</td>
-                                    <td>
-                                    <button name="savechanges" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button>
-                                    </td> 
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Chanel</td>
-                                    <td>4</td>
-                                    <td>Female</td>
-                                    <td>4kg</td>
-                                    <td>Michelle Nervez</td>
-                                    <td>09055459215</td>
-                                    <td>mitchnervez22@gmail.com</td>
-                                    <td>
-                                    <button name="savechanges" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Antibiotic</td>
-                                    <td>5</td>
-                                    <td>12/07/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>
-                                    <button name="savechanges" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Beef Jerky Food</td>
-                                    <td>10</td>
-                                    <td>12/10/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>12/01/2022</td>
-                                    <td>
-                                    <button name="savechanges" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount" data-modal="modal2"><span class="material-symbols-sharp archive">archive</span></button>
-                                    </td>
-                                </tr>
+                                        </tr>';
+                                        }
+                                    }
+?>
                             </tbody>
                         </table>
                 </div>
@@ -166,7 +150,7 @@
 
         <!--  End of Main Tag  -->
         <?php   include 'systemaccountanddate.php'; ?>
-        <!--  Start of Retrive section  -->
+        <!--  Start of Retrieve section  -->
         <h1>Retrieve Profile</h1>
         <div class="buttons">
             <div class="buttonmodify">
@@ -176,6 +160,19 @@
         
         <!-- Start of Modal --> 
         <!-- Modal of Edit Profile -->
+        <?php 
+            // // Update Profile 
+            // $sql = "Select * from tblprofile where profileid = $proid";
+            // $res = mysqli_query($conn, $sql);
+            // $row = mysqli_fetch_assoc($res);
+            // $pname = $row['name'];
+            // $age = $row['age'];
+            // $sex = $row['sex'];
+            // $weight = $row['weight'];
+            // $owner = $row['owner'];
+            // $phone = $row['phone'];
+            // $email = $row['email'];
+        ?>
         <div class="modal" id="modal1">
             <div class="modal-content">
                 <div class="modal-header"><h1>Edit Profile</h1>
@@ -188,7 +185,8 @@
                                 <form action="" method="POST" >
                                 <div class="formprofile">
                                     <div> 
-                                    <input type="text" name="petname" >
+                                    <input type="text" name="petname" value=<?php 
+                                    echo $pname; ?>>
                                     <span>Pet Name</span>
                                     </div>
                                 <div> 
@@ -196,12 +194,11 @@
                                 <span>Age</span>
                             </div>
                             <div> 
-                                <span class="material-symbols-sharp markdown">expand_more</span>
-                                <select name="usertype" id="ut" >
-                                <option value="Choose">Choose...</option>
-                                <option value="Admin">Male</option>
-                                <option value="Secretary">Female</option>    
-                                </select>
+                                <input type="text" name="sex" list="sex" required>
+                                <datalist id="sex">
+                                <option>Male</option>
+                                <option>Female</option>    
+                                </datalist>
                                 <span>Sex</span>
                             </div>
                           
@@ -237,6 +234,11 @@
             </div>
         </div>
         <!-- Modal of Archive Profile MessageBox -->
+        <?php 
+            // Insert data in tblarcprofile
+                                   
+        
+        ?>
         <div class="modal" id="modal2">
             <div class="modal-content">
                 <div class="modal-header"><h1>Archive Profile</h1>

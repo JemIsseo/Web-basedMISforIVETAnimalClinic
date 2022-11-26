@@ -268,8 +268,7 @@ aside .sidebar a:hover span {
 }
 
 ::placeholder {
-    text-align: left;
-    padding: 3em;
+    text-align: center;
     opacity: .70;
 }
 
@@ -310,7 +309,7 @@ aside .sidebar a:hover span {
     width: 100%;
     display: block;
     height: 250px;
-    overflow: auto;
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -333,7 +332,7 @@ aside .sidebar a:hover span {
 
 .content-table th,
 .content-table td {
-    padding: 8px 5px;
+    padding: 8px 10px;
     border-bottom: 1px solid rgb(238, 233, 233);
 }
 

@@ -1,3 +1,26 @@
+<?php 
+    // include 'connect.php';
+    // if (isset($_POST['submit'])) {
+    //     $un = $_POSTP['username'];
+    //     $pw = $_POSTP['password'];
+    //     $ut = $_POSTP['usertype'];
+    //     $lg = $_POSTP['loginname'];
+    //     $uimg = $_POSTP['userimg'];
+
+    //         $sql = "INSERT INTO tbluseraccount(username,password,usertype,loginname,userimg) values('$un','$pw','$ut','$lg','$uimg')";
+    //     $res = mysqli_query($conn,$sql);
+    //     if($res) {
+    //         header('location:dashboard.php');
+    //     } 
+    //     else {
+    //         die(mysqli_error($conn));
+    //     }
+
+
+
+
+    // }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,70 +52,73 @@
                         <table class="content-table table-fixed">
                             <thead>
                                 <tr>
-                                    <th>Profile</th>
                                     <th>Username</th>
                                     <th>Password</th>
                                     <th>Usertype</th>
                                     <th>Loginname</th>
+                                    <th>User Image</th>
                                     <th>         </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>admin</td>
+                                    <td>***</td>
+                                    <td>Administrator</td>
+                                    <td>admin123</td>
                                     <td>
                                         <div class="profile-photo">
                                             <button class="modal-open" data-modal="modal0"><img src="../images/profile-2.png" alt="User Photo"></button>
                                         </div>
                                     </td>
-                                    <td>admin</td>
-                                    <td>***</td>
-                                    <td>Administrator</td>
-                                    <td>admin123</td>
                                     <td>
                                     <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit" title="Edit this account">edit</span></button>
                                     <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive this record">archive</span></button> 
                                     </td> 
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="profile-photo">
-                                            <img src="../images/profile-3.jpeg" alt="User Photo">
-                                        </div>
-                                    </td>
+                                   
                                     <td>JemLeaves</td>
                                     <td>***********</td>
                                     <td>Animal Handler</td>
                                     <td>jemisseo</td>
                                     <td>
+                                        <div class="profile-photo">
+                                            <img src="../images/profile-3.jpeg" alt="User Photo">
+                                        </div>
+                                    </td>
+                                    <td>
                                     <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
                                     <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
                                     </td>
                                 </tr>
                                 <tr>
+                                   
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
                                     <td>
                                         <div class="profile-photo">
                                             <img src="../images/profile-4.jpg" alt="User Photo">
                                         </div>
                                     </td>
-                                    <td>sec</td>
-                                    <td>****</td>
-                                    <td>Secretary</td>
-                                    <td>secretary_321</td>
                                     <td>
                                     <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
                                     <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
                                     </td>
                                 </tr>
                                 <tr>
+                                   
+                                    <td>sec</td>
+                                    <td>****</td>
+                                    <td>Secretary</td>
+                                    <td>secretary_321</td>
                                     <td>
                                         <div class="profile-photo">
                                             <img src="../images/profile-1.jpg" alt="User Photo">
                                         </div>
                                     </td>
-                                    <td>sec</td>
-                                    <td>****</td>
-                                    <td>Secretary</td>
-                                    <td>secretary_321</td>
                                     <td>
                                     <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
                                     <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
@@ -108,10 +134,11 @@
                 <h1>Create An Account</h1>
                 <div class="accountrecordsbg">
                     <div class="accountrecords ">
-                        <form action="" method="POST" >
+                        <form action="" method="POST" enctype="multipart/form-data" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>
-                                <input type="file" name"profile" title="Insert photo...">
+                                <input type="file" name"userimg" title="Insert photo...">
+                                <button class="uploadbtn">Upload</button>
                             </div> 
                             <div class="formprofile">
                             <div> 
@@ -123,12 +150,12 @@
                                 <span>Password</span>
                             </div>
                             <div>
-                                <input type="password" name="cpassword" placeholder="Enter Confirm Password">
+                                <input type="password" placeholder="Enter Confirm Password">
                                 <span>Confirm Password</span>
                             </div>
                             <div>
                                 <span class="material-symbols-sharp markdown">expand_more</span>
-                                <select name="usertype" id="ut" >
+                                <select name="ut" id="ut" >
                                 <option value="Choose">Choose...</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Secretary">Secretary</option>    
