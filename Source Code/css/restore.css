@@ -247,7 +247,7 @@ aside .sidebar a:hover span {
     padding: 1em;
     height: 80%;
     width: 90%;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: end;
@@ -332,7 +332,7 @@ aside .sidebar a:hover span {
 
 .content-table th,
 .content-table td {
-    padding: 8px 10px;
+    padding: 7px 9px;
     border-bottom: 1px solid rgb(238, 233, 233);
 }
 
@@ -363,7 +363,7 @@ aside .sidebar a:hover span {
     box-shadow: none;
 }
 
-.buttonmodify a {
+.buttonmodify button {
     background: linear-gradient(to right bottom, rgb(71, 189, 216),var(--color-primary));
     color: var(--color-white);
     padding: 2em;
@@ -384,7 +384,6 @@ aside .sidebar a:hover span {
     left: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
-    display: none;
     box-shadow: 0 0 50rem var(--color-dark);
 }
 
@@ -430,8 +429,9 @@ aside .sidebar a:hover span {
 }
 
 
-#modal2 .modal-body {
-    padding: 2em;
+#modal2 .modal-body h3 {
+    padding: 3em;
+    font-size: 15px;
 }
 
 #modal2 .modal-header .modal-close {
@@ -439,7 +439,7 @@ aside .sidebar a:hover span {
 }
 
 #modal4 .modal-content {
-    width: 80%;
+    width: 78%;
 }
 
 #modal4 .modal-header {
@@ -449,7 +449,7 @@ aside .sidebar a:hover span {
 }
 
 #modal3 {
-    z-index: 10;
+    z-index: 5;
 }
 
 #modal3 .modal-content {
@@ -637,6 +637,7 @@ aside .sidebar a:hover span {
 }
 
 .no {
+    padding: .55em 3.5em;
     background: var(--color-light-red);
 }
 
