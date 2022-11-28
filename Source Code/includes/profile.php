@@ -1,26 +1,31 @@
-<?php include 'connect.php'; 
+<?php 
+    include 'connect.php'; 
+
     if(isset($_POST['submit'])){
     $pname = $_POST['petname'];
     $age = $_POST['age'];
-    $utsex = $_POST['sex'];
+    $sex = $_POST['sex'];
     $weight = $_POST['weight'];
     $owner = $_POST['owner'];
     $phone = $_POST['phone']; 
     $email = $_POST['email'];
 
     $sql = "insert into tblprofile(petname, age, sex, weight, ownername, phone, email) 
-            values('$pname','$age','$utsex','$weight','$owner','$phone','$email')";
+            values('$pname','$age','$sex','$weight','$owner','$phone','$email')";
     $res = mysqli_query($conn,$sql);
-    if($res) {
-        // dialog message
-        header('location:profile.php');
+    if($res) { ?>
+            <div class="statusmessagesuccess" id="close">
+                  <h2>Profile Added Successfully!</h2>
+                  <button class="icon"><span class="material-symbols-sharp">close</span></button>
+            </div>
+<?php 
     } 
     else {
         die(mysqli_error($conn));
     }
 }
-?>
 
+?>
 
 
 
@@ -41,7 +46,7 @@
         <?php  include 'aside.php'; ?>    
 
         <!--  Main Tag  -->
-        <main>
+        <main>        
             <section class="tableprofile">
                 <h1>Create a Profile</h1>
                 <div class="table-profile">
@@ -87,21 +92,21 @@
                     </form>
                 </div>
             </section>
-
+         
             <!--  End of profile   -->
-            <section class="tableprofile">
+            <section class="tableprofiles">
                 <div class="accrecsearch">
                     <h1>List of Profiles</h1>
                     <div class="searchbar">
-                        <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
+                        <input type="text" placeholder="Search here" id="live-search"><span class="material-symbols-sharp">search</span>
                     </div>
                 </div>
-                <div class="table-profile">
+                <div class="table-profile"id="searchresult">
                         <table class="content-table">
                             <thead>
                                 <tr>
                                     <th>ProfileID</th>
-                                    <th>Name</th>
+                                    <th>PetName</th>
                                     <th>Age</th>
                                     <th>Sex</th>
                                     <th>Weight</th>
@@ -121,7 +126,7 @@
                                     $proid=$row['profileid'];
                                     $pname=$row['petname'];
                                     $age=$row['age'];
-                                    $utsex=$row['sex']; 
+                                    $sex=$row['sex']; 
                                     $weight=$row['weight'];
                                     $owner=$row['ownername'];
                                     $phone=$row['phone'];
@@ -130,7 +135,7 @@
                                     <td>'.$proid.'</td>
                                     <td>'.$pname.'</td>
                                     <td>'.$age.'</td>
-                                    <td>'.$utsex.'</td>
+                                    <td>'.$sex.'</td>
                                     <td>'.$weight.'</td>
                                     <td>'.$owner.'</td>
                                     <td>'.$phone.'</td>
@@ -159,6 +164,12 @@
             </div>
         </div>
         <!-- Start of Modal --> 
+
+
+
+
+
+
         <!-- Modal of Restore Profile MessageBox -->
         <div class="modal" id="modal3">
             <div class="modal-content">
@@ -178,6 +189,7 @@
     </div>
 
     <script src="../js/script.js"></script>
+    
 </body>
 </html>
 

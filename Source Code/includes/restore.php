@@ -25,9 +25,9 @@
                     <h1>Restore Profile</h1>
                     <div class="accrecsearch">
                         <div class="searchbar">
-                        <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
-                        <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
-                        </div>
+                            <input type="text" placeholder="Search here"><span class="material-symbols-sharp">search</span>
+                        </div> 
+                        <a href="profile.php" class="icon"><span class="material-symbols-sharp">close</span></a>
                     </div>
                 </div> 
                    

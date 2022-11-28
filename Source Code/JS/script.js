@@ -3,6 +3,8 @@ const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const relMessage = document.querySelector(".statusmessagesuccess");
+const closeMessage = document.querySelector("#close");
 
 // opening modals
 var modalBtns = document.querySelectorAll(".modal-open");
@@ -31,6 +33,12 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 });  
+
+// close message
+closeMessage.addEventListener('click', () => {
+    closeMessage.style.display = 'none';
+});  
+
 
 // change theme
 const enableDarkMode = () => {

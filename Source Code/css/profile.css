@@ -241,6 +241,7 @@ aside .sidebar a:hover {
 aside .sidebar a:hover span {
     margin-left: 1rem;
 }
+
 /*  Start of Main  */
 /*  Profile Form  */
 .formprofile {
@@ -279,6 +280,24 @@ aside .sidebar a:hover span {
 .markdown {
     color: var(--color-primary);
     margin-left: 8.5em;
+}
+
+/* 
+ Status Message */
+.statusmessagesuccess {
+    background-color: #96f5b6;
+    margin: .5em;
+    border-radius: 5px;
+    display: flex;
+    padding: 1em;
+    gap: 33em;
+    position: absolute;
+    justify-content: right;
+    margin-left: 21em;
+}
+
+.statusmessagesuccess button {
+    background: transparent;
 }
 
 .formprofile span {
@@ -342,6 +361,10 @@ aside .sidebar a:hover span {
     padding: 12px 27px;
 }
 
+
+.searchbutton input {
+    padding: 2em;
+}
 
 .searchbar span {
     color: var(--color-primary);

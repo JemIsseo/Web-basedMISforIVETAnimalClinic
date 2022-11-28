@@ -243,6 +243,20 @@ aside .sidebar a:hover span {
 }
 /*  Start of Main  */
 /*  Profile Form  */
+.statusmessageinfo {
+    background-color: #5bc2f1;
+    margin: .5em;
+    border-radius: 5px;
+    display: flex;
+    padding: 1em;
+    gap: 33em;
+    position: absolute;
+    justify-content: right;
+    margin-left: 21em;
+}
+
+
+
 .formprofile {
     padding: 1em;
     height: 80%;

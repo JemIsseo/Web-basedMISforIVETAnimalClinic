@@ -403,7 +403,7 @@ aside .sidebar a:hover span {
 }
 
 .modal-header .modal-close {
-    margin-left: 77%;
+    margin-left: 50%;
     background: transparent;
 }
 
@@ -435,17 +435,17 @@ aside .sidebar a:hover span {
 }
 
 #modal2 .modal-header .modal-close {
-    margin-left: 50%;
+    margin-left: 40%;
 }
 
 #modal4 .modal-content {
-    width: 78%;
+    width: 80%;
 }
 
 #modal4 .modal-header {
     padding: 1em;
     display: flex;
-    gap: 30em;
+    gap: 20em;
 }
 
 #modal3 {

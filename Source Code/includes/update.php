@@ -36,7 +36,6 @@
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +49,7 @@
     <link rel="stylesheet" href="../css/update.css">
 </head>
 <body>
-    
+
 
  <!-- Modal of Edit Profile -->
 <div class="modal" id="modal1">
@@ -59,7 +58,7 @@
                     <a href="profile.php" class="icon modal-close"><span class="material-symbols-sharp">close</span></a>
                 </div>
                     <div class="modal-body">
-               
+
                         <section class="tableprofile">
                             <div class="table-profile">
                                 <form action="" method="POST" >
@@ -81,7 +80,7 @@
                                 </datalist>
                                 <span>Sex</span>
                             </div>
-                          
+
                             <div>
                                 <input type="text" name="owner" value=<?php echo $owner; ?>>
                                 <span>Owner's Name</span>
@@ -99,7 +98,7 @@
                                 <span>Email</span>
                             </div>
                         </div>
-                    
+
                 </div>
             </section>
 

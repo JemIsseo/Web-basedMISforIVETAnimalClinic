@@ -1,25 +1,22 @@
 <?php 
-    // include 'connect.php';
-    // if (isset($_POST['submit'])) {
-    //     $un = $_POSTP['username'];
-    //     $pw = $_POSTP['password'];
-    //     $ut = $_POSTP['usertype'];
-    //     $lg = $_POSTP['loginname'];
-    //     $uimg = $_POSTP['userimg'];
+    include 'connect.php';
+    if (isset($_POST['submit'])) {
+        $un = $_POST['username'];
+        $pw = $_POST['password'];
+        $ut = $_POST['usertype'];
+        $lg = $_POST['loginname'];
+        $uimg = $_POST['userimg'];
 
-    //         $sql = "INSERT INTO tbluseraccount(username,password,usertype,loginname,userimg) values('$un','$pw','$ut','$lg','$uimg')";
-    //     $res = mysqli_query($conn,$sql);
-    //     if($res) {
-    //         header('location:dashboard.php');
-    //     } 
-    //     else {
-    //         die(mysqli_error($conn));
-    //     }
+        $sql = "insert into tbluseraccount(username,password,usertype,loginname,userimg) values('$un','$pw','$ut','$lg','$uimg')";
+        $res = mysqli_query($conn,$sql);
+        if($res) {
+            header('location:useraccount.php');
+        } 
+        else {
+            die(mysqli_error($conn));
+        }
 
-
-
-
-    // }
+    }
 ?>
 
 <!DOCTYPE html>
