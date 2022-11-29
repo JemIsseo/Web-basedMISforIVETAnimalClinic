@@ -298,7 +298,7 @@ main {
 }
 
 ::placeholder {
-    text-align: left;
+    text-align: center;
     padding: 2em;
     opacity: .70;
 }
@@ -311,6 +311,24 @@ main {
     position: fixed;
     right: 41%;
     color: var(--color-primary);
+}
+
+/* 
+ Status Message */
+ .statusmessagesuccess {
+    background-color: #96f5b6;
+    margin: .5em;
+    border-radius: 5px;
+    display: flex;
+    padding: 1em;
+    gap: 33em;
+    position: absolute;
+    justify-content: right;
+    margin-left: 21em;
+}
+
+.statusmessagesuccess button {
+    background: transparent;
 }
 
 .buttonflex {

@@ -1,22 +1,7 @@
+
 <?php 
     include 'connect.php';
-    if (isset($_POST['submit'])) {
-        $un = $_POST['username'];
-        $pw = $_POST['password'];
-        $ut = $_POST['usertype'];
-        $lg = $_POST['loginname'];
-        $uimg = $_POST['userimg'];
 
-        $sql = "insert into tbluseraccount(username,password,usertype,loginname,userimg) values('$un','$pw','$ut','$lg','$uimg')";
-        $res = mysqli_query($conn,$sql);
-        if($res) {
-            header('location:useraccount.php');
-        } 
-        else {
-            die(mysqli_error($conn));
-        }
-
-    }
 ?>
 
 <!DOCTYPE html>
@@ -73,54 +58,6 @@
                                     <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive this record">archive</span></button> 
                                     </td> 
                                 </tr>
-                                <tr>
-                                   
-                                    <td>JemLeaves</td>
-                                    <td>***********</td>
-                                    <td>Animal Handler</td>
-                                    <td>jemisseo</td>
-                                    <td>
-                                        <div class="profile-photo">
-                                            <img src="../images/profile-3.jpeg" alt="User Photo">
-                                        </div>
-                                    </td>
-                                    <td>
-                                    <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                   
-                                    <td>sec</td>
-                                    <td>****</td>
-                                    <td>Secretary</td>
-                                    <td>secretary_321</td>
-                                    <td>
-                                        <div class="profile-photo">
-                                            <img src="../images/profile-4.jpg" alt="User Photo">
-                                        </div>
-                                    </td>
-                                    <td>
-                                    <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                   
-                                    <td>sec</td>
-                                    <td>****</td>
-                                    <td>Secretary</td>
-                                    <td>secretary_321</td>
-                                    <td>
-                                        <div class="profile-photo">
-                                            <img src="../images/profile-1.jpg" alt="User Photo">
-                                        </div>
-                                    </td>
-                                    <td>
-                                    <button name="savechanges"><span class="material-symbols-sharp edit">edit</span></button>
-                                    <button name="archiveaccount"><span class="material-symbols-sharp archive">archive</span></button> 
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -134,8 +71,7 @@
                         <form action="" method="POST" enctype="multipart/form-data" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>
-                                <input type="file" name"userimg" title="Insert photo...">
-                                <button class="uploadbtn">Upload</button>
+                                <input type="file" name="image" title="Insert photo...">
                             </div> 
                             <div class="formprofile">
                             <div> 
@@ -150,22 +86,22 @@
                                 <input type="password" placeholder="Enter Confirm Password">
                                 <span>Confirm Password</span>
                             </div>
-                            <div>
-                                <span class="material-symbols-sharp markdown">expand_more</span>
-                                <select name="ut" id="ut" >
-                                <option value="Choose">Choose...</option>
-                                <option value="Admin">Admin</option>
-                                <option value="Secretary">Secretary</option>    
-                                <option value="Secretary">Animal Handler</option> 
-                                </select>
+                            <div> 
+                                <input type="text" name="ut" placeholder="Choose..." list="ut" autocomplete="off" required>
+                                <datalist id="ut">
+                                <option value="IT Expert"></option>   
+                                <option value="Admin"></option>
+                                <option value="Secretary"></option>   
+                                </datalist>
                                 <span>Usertype</span>
                             </div>
                             <div>
                                 <input type="text" name="loginname" placeholder="Enter Loginname">
                                 <span>Loginname</span>
+                            </div>
                             <div class="buttonflex">
-                                <button name="saveprofile" type="submit" class="save" title="Save the record">Save</button>
-                                <button name="saveprofile" type="submit" class="cancel" title="Clear all inputs">Clear</button>
+                                <button name="saveaccount" type="submit" class="save" title="Save the record">Save</button>
+                                <button class="cancel" title="Clear all inputs">Clear</button>
                             </div>
                         </form>
                     </div>
@@ -212,29 +148,28 @@
                         <form action="" method="POST" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>
-                                <input type="file" name"profile">
+                                <input type="file" name="image">
                             </div> 
                             <div class="formprofile">
                             <div> 
-                                <input type="text" name="username" >
+                                <input type="text" name="username" required>
                                 <span>Username</span>
                             </div>
                             <div>
-                                <input type="password" name="password" >
+                                <input type="password" name="password" required>
                                 <span>Password</span>
                             </div>
                             <div>
-                                <input type="password" name="cpassword" >
+                                <input type="password" name="cpassword" required>
                                 <span>Confirm Password</span>
                             </div>
-                            <div class="cbo-usertype">
-                                <span class="material-symbols-sharp markdown-editprofile">expand_more</span>
-                                <select name="usertype" id="ut" >
-                                <option value="Choose">Choose...</option>
-                                <option value="Admin">Admin</option>
-                                <option value="Secretary">Secretary</option> 
-                                <option value="Secretary">Animal Handler</option>    
-                                </select>
+                            <div> 
+                                <input type="text" name="usertype" placeholder="Choose..." list="ut" autocomplete="on" required>
+                                <datalist id="ut">
+                                <option value="Admin"></option>
+                                <option value="Secretary"></option>    
+                                <option value="IT Expert"></option>    
+                                </datalist>
                                 <span>Usertype</span>
                             </div>
                                 <div>

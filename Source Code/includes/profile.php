@@ -22,9 +22,80 @@
     } 
     else {
         die(mysqli_error($conn));
+        }
     }
-}
 
+if(isset($_POST['updateprofile'])){
+        $proid = $_POST['profileid'];
+        $pname = $_POST['petname'];
+        $age = $_POST['age'];
+        $utsex = $_POST['sex'];
+        $weight = $_POST['weight'];
+        $owner = $_POST['owner'];
+        $phone = $_POST['phone']; 
+        $email = $_POST['email'];
+    
+        $sql = "update tblprofile set profileid ='$proid',petname ='$pname', 
+                age='$age',sex ='$utsex',weight ='$weight', ownername ='$owner',phone ='$phone', email='$email' 
+                where profileid= $proid";
+        $res = mysqli_query($conn,$sql);
+        if($res) {
+            // dialog message 
+            header('location:profile.php');
+        } 
+        else {
+            die(mysqli_error($conn));
+        }
+    }
+
+    // archive statement
+    if(isset($_POST['savearchiveprofile'])){
+        $pname = $_POST['petname'];
+        $age = $_POST['age'];
+        $sex = $_POST['sex'];
+        $weight = $_POST['weight'];
+        $owner = $_POST['owner'];
+        $phone = $_POST['phone']; 
+        $email = $_POST['email'];
+        
+        $sql = "insert into tblarcprofile(petname, age, sex, weight, owner, phone, email) 
+                values('$pname','$age','$sex','$weight','$owner','$phone','$email')";
+        $res = mysqli_query($conn,$sql);
+        if($res) {
+            header('location:profile.php');
+            if ($proid = $_POST['profileid']) {
+                $sql = "delete from tblprofile where profileid= $proid";
+                $res = mysqli_query($conn, $sql);
+            }
+        } else {
+            die(mysqli_error($conn));
+        }
+    }
+
+    // restore statement
+    if(isset($_POST['saverestoreprofile'])){
+        $pname = $_POST['petname'];
+        $age = $_POST['age'];
+        $sex = $_POST['sex'];
+        $weight = $_POST['weight'];
+        $owner = $_POST['owner'];
+        $phone = $_POST['phone']; 
+        $email = $_POST['email'];
+        
+        $sql = "insert into tblprofile(petname, age, sex, weight, ownername, phone, email) 
+                values('$pname','$age','$sex','$weight','$owner','$phone','$email')";
+        $res = mysqli_query($conn,$sql);
+        if($res) {
+            header('location:profile.php');
+            if ($proid = $_POST['profileid']) {
+                $sql = "delete from tblarcprofile where profileid= $proid";
+                $res = mysqli_query($conn, $sql);
+            }
+        } 
+        else {
+            die(mysqli_error($conn));
+        }
+    }
 ?>
 
 
@@ -141,8 +212,8 @@
                                     <td>'.$phone.'</td>
                                     <td>'.$email.'</td>
                                     <td>
-                                    <a href="update.php?profileid='.$proid.'" ><span class="material-symbols-sharp edit" title="Edit this profile">edit</span></a>
-                                    <a href="archive.php?profileid='.$proid.'" ><span class="material-symbols-sharp archive" title="Archive the record">archive</span></a>
+                                    <button class="modal-open showUpdateProfile" data-modal="modal1" value="'.$proid.'" ><span class="material-symbols-sharp edit" title="Edit this profile">edit</span></button>
+                                    <button class="modal-open showArchiveProfile" data-modal="modal2" value="'.$proid.'"><span class="material-symbols-sharp archive" title="Archive the record">archive</span></button>
                                     </td>
                                     </tr>';
                                 }
@@ -160,36 +231,154 @@
         <h1>Retrieve Profile</h1>
         <div class="buttons">
             <div class="buttonmodify">
-                <a href="restore.php" title="View and Restore Record"><span class="material-symbols-sharp">table_view</span>View Archive Profile</a> 
+                <button class="modal-open" data-modal="modal4" title="View and Restore Record"><span class="material-symbols-sharp">table_view</span>View Archive Profile</button> 
             </div>
         </div>
         <!-- Start of Modal --> 
+    
+ <!-- Modal of Edit Profile -->
+<div class="modal" id="modal1">
+            <div class="modal-content">
+                <div class="modal-header"><h1>Edit Profile</h1>
+                    <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                </div>
+                <div class="modal-body" id="updateProfile">
+                </div>
+            </div>
+</div>
 
+<!-- Modal of Archive Profile MessageBox -->
+<div class="modal" id="modal2">
+            <div class="modal-content">
+                <div class="modal-header"><h1>Archive Profile</h1>
+                    <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                </div>
+                <div class="modal-body" id="archiveProfile">
+                </div>  
+            </div>
+</div>
+   
+ <!-- Modal of Restore Profile -->
+    <div class="modal" id="modal4">
+            <div class="modal-content" >  
+            <div class="modal-header">
+                    <h1>Restore Profile</h1>
+                    <div class="accrecsearch">
+                        <div class="searchbar">
+                        <input type="text" placeholder="Search here" id="live-search"><span class="material-symbols-sharp">search</span>
+                        <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                        </div> 
+                    </div>
+                </div> 
+                   
+                <div class="modal-body" id="viewArchive" >
+                <section class="tableprofile">
+                    <div class="table-profile">
+                        <table class="content-table table-archive">
+                            <thead>
+                                <tr>
+                                    <th>ProfileID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Sex</th>
+                                    <th>Weight</th>
+                                    <th>Owner</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>        </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                    $sql = "Select * from tblarcprofile";
+                                    $res= mysqli_query($conn,$sql);
 
+                                    if($res){
+                                    while($row=mysqli_fetch_assoc($res)){
+                                    $proid=$row['profileid'];
+                                    $pname=$row['petname'];
+                                    $age=$row['age'];
+                                    $utsex=$row['sex']; 
+                                    $weight=$row['weight'];
+                                    $owner=$row['owner'];
+                                    $phone=$row['phone'];
+                                    $email=$row['email'];
+                                    echo '<tr>
+                                    <td>'.$proid.'</td>
+                                    <td>'.$pname.'</td>
+                                    <td>'.$age.'</td>
+                                    <td>'.$utsex.'</td>
+                                    <td>'.$weight.'</td>
+                                    <td>'.$owner.'</td>
+                                    <td>'.$phone.'</td>
+                                    <td>'.$email.'</td>
+                                    <td>
+                                    <button class="modal-open viewRestoreProfile" data-modal="modal5">
+                                        <span class="material-symbols-sharp restore" title="Unarchiving">unarchive</span>
+                                    </button> 
+                                    </td>
+                                    </tr>';
+                                }
+                            } 
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </section>
+                </div>
+                <div class="modal-footer">
+                        <div class="buttonflexright">
+                            <button class="modal-close cancel" ><span title="Cancel">Cancel</span></button>
+                        </div>
+                    </div>
 
-
-
-
-        <!-- Modal of Restore Profile MessageBox -->
-        <div class="modal" id="modal3">
+            </div>
+    </div>
+                   
+    <!-- Modal of Restore Profile MessageBox -->
+    <div class="modal" id="modal5">
             <div class="modal-content">
                 <div class="modal-header"><h1>Unarchive Profile</h1>
                     <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
                 </div>
-                <div class="modal-body"><h3>Are you sure you want to restore this record?</h3></div>
-                    <div class="modal-footer">
-                        <div class="buttonflexright">
-                            <button name="savearchiveprofile" type="submit" class="yes">Yes</button>
-                            <button type="submit" class="cancel no modal-close">No</button>
-                        </div>
-                    </div>
+                <div class="modal-body" id="restoreProfile">
+                   
                 </div>
             </div>
         </div>
-    </div>
 
     <script src="../js/script.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <script >
+        $(document).ready(function() {
+            $(".showUpdateProfile").click(function() {
+                var updateid = this.value;
+                $("#updateProfile").load("submit.php", {
+                    updateID: updateid
+                })
+                // reload();
+            })
+            $(".showArchiveProfile").click(function() {
+                var archiveid = this.value;
+                $("#archiveProfile").load("submit.php", {
+                    archiveID: archiveid
+                })
+                // reload();
+            })
+            $(".showRestoreProfile").click(function() {
+                var restoreid = this.value;
+                $("#restoreProfile").load("submit.php", {
+                    restoreID: restoreid
+                })
+                // reload();
+            })
+
+
+        })
+    </script>
 </body>
 </html>
 

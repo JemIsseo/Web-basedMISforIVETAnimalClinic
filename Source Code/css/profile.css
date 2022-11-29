@@ -255,6 +255,10 @@ aside .sidebar a:hover span {
     gap: 3em;
 }
 
+.formarchive {
+    display: none;
+}
+
 .formprofile input ,#ut {
     height: 4vh;
     width: 15vw;
@@ -373,20 +377,9 @@ aside .sidebar a:hover span {
 }
 
 /* Buttons */
-.buttons {
-    background: var(--color-white);
-    height: 43vh;
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-    margin: 1em;
-}
 
-.buttons:hover {
-    box-shadow: none;
-}
 
-.buttonmodify a {
+.buttonmodify button {
     background: linear-gradient(to right bottom, rgb(71, 189, 216),var(--color-primary));
     color: var(--color-white);
     padding: 2em;
@@ -462,13 +455,13 @@ aside .sidebar a:hover span {
 }
 
 #modal4 .modal-content {
-    width: 80%;
+    width: 70%;
 }
 
 #modal4 .modal-header {
     padding: 1em;
     display: flex;
-    gap: 30em;
+    gap: 20em;
 }
 
 #modal3 {
@@ -480,6 +473,8 @@ aside .sidebar a:hover span {
 }
 
 
+
+
 #modal3 .modal-body {
     padding: 2em;
 }
@@ -488,13 +483,16 @@ aside .sidebar a:hover span {
     margin-left: 50%;
 }
 
-
 .buttonflex {
     margin: 0 auto;
 }
 
 .buttonflexright {
     text-align: right;
+}
+
+.messageyesno {
+    margin-top: 2em;
 }
 
 /* Searchbar Style */
