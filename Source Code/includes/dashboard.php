@@ -206,7 +206,7 @@
 
     </div>
 
-    <script src="../JS/script.js"></script>
+    <?php include 'scriptingfiles.php'; ?>
 </body>
 </html>
 

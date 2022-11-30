@@ -65,3 +65,4 @@ darkModeToggle.addEventListener('click', () => {
     darkModeToggle.querySelector('span:nth-child(2)').classList.toggle('active');
     darkModeToggle.querySelector('span:nth-child(1)').classList.toggle('active');
 });
+

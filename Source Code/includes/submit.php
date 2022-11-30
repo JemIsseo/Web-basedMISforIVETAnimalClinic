@@ -191,4 +191,60 @@
                     </form> 
 <?php 
        }
+
+       if (isset($_POST['accountID'])) {     
+        $accountID = $_POST['accountID'];
+        $sql = "Select * from tbluseraccount where username ='$accountID'";
+        $res= mysqli_query($conn,$sql);
+        $upRow = mysqli_fetch_assoc($res); 
+        $img=$upRow['image'];
+        $un=$upRow['username'];
+        $pw=$upRow['password'];
+        $ut=$upRow['usertype'];
+        $ea=$upRow['emailaddress']; 
+       
+
+        ?>
+        <section class="tableaccountrecords">
+                <div class="accountrecordsbg">
+                    <div class="accountrecords ">
+                        <form action="useraccount.php" method="POST" enctype="multipart/form-data" >
+                            <div class="profilepicture">
+                            <div class="updatephoto">
+                                <img src="uploads/<?php echo $img;?>">
+                            </div>                                         
+                            <input type="file" name="image" title="Insert photo..." value=" <?= $img; ?> ">
+                            </div>  
+                            <div class="formprofile">
+                            <div> 
+                                <input type="text" name="username" placeholder="Enter Username" value="<?= $un;  ?>" readonly>
+                                <span>Username</span>
+                            </div>
+                            <div>
+                                <input type="password" name="password" placeholder="Enter Password" value="<?= $pw;  ?>">
+                                <span>Password</span>
+                            </div>
+                            <div> 
+                                <input type="text" name="ut" placeholder="Choose..." list="ut" autocomplete="off" value="<?= $ut;  ?>">
+                                <datalist id="ut">
+                                <option value="IT Expert"></option>   
+                                <option value="Admin"></option>
+                                <option value="Secretary"></option>   
+                                </datalist>
+                                <span>Usertype</span>
+                            </div>
+                            <div>
+                                <input type="email" name="emailaddress" placeholder="Enter Email" value="<?= $ea;  ?>">
+                                <span>Email Address</span>
+                            </div>
+                            <div class="buttonflex">
+                                <button name="updateaccount" type="submit" class="yes" title="Save Record">Update</button>
+                                <button class="cancel modal-close" title="Cancel">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+<?php
+       }
 ?>

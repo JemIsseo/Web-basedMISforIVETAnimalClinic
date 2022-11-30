@@ -39,9 +39,13 @@ if(isset($_POST['updateprofile'])){
                 age='$age',sex ='$utsex',weight ='$weight', ownername ='$owner',phone ='$phone', email='$email' 
                 where profileid= $proid";
         $res = mysqli_query($conn,$sql);
-        if($res) {
-            // dialog message 
-            header('location:profile.php');
+        if($res) {?>  
+            <div class="statusmessagesuccess" id="close">
+                <h2>Profile Updated Successfully!</h2>
+                <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+            </div>
+            
+        <?php  
         } 
         else {
             die(mysqli_error($conn));
@@ -62,11 +66,17 @@ if(isset($_POST['updateprofile'])){
                 values('$pname','$age','$sex','$weight','$owner','$phone','$email')";
         $res = mysqli_query($conn,$sql);
         if($res) {
-            header('location:profile.php');
             if ($proid = $_POST['profileid']) {
                 $sql = "delete from tblprofile where profileid= $proid";
                 $res = mysqli_query($conn, $sql);
             }
+            ?>  
+            <div class="statusmessagesuccess" id="close">
+                <h2>Profile has been archived</h2>
+                <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+            </div>
+            
+        <?php  
         } else {
             die(mysqli_error($conn));
         }
@@ -86,10 +96,16 @@ if(isset($_POST['updateprofile'])){
                 values('$pname','$age','$sex','$weight','$owner','$phone','$email')";
         $res = mysqli_query($conn,$sql);
         if($res) {
-            header('location:profile.php');
             if ($proid = $_POST['profileid']) {
                 $sql = "delete from tblarcprofile where profileid= $proid";
                 $res = mysqli_query($conn, $sql);
+                ?>  
+            <div class="statusmessagesuccess" id="close">
+                <h2>Profile has been restored!</h2>
+                <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+            </div>
+            
+        <?php  
             }
         } 
         else {
@@ -347,35 +363,7 @@ if(isset($_POST['updateprofile'])){
             </div>
     </div>
 
-    <script src="../js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $(".showUpdateProfile").click(function() {
-                var updateid = this.value;
-                $("#updateProfile").load("submit.php", {
-                    updateID: updateid
-                })
-                // reload();
-            })
-            $(".showArchiveProfile").click(function() {
-                var archiveid = this.value;
-                $("#archiveProfile").load("submit.php", {
-                    archiveID: archiveid
-                })
-                // reload();
-            })
-            $(".viewRestoreProfile").click(function() {
-                var restoreid = this.value;
-                $("#restoreProfile").load("submit.php", {
-                    restoreID: restoreid
-                })
-                // reload();
-            })
-        })
-    </script>
+    <?php include 'scriptingfiles.php'; ?>
 </body>
 </html>
 

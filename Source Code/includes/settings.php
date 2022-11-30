@@ -398,7 +398,7 @@
 
     </div>
 
-    <script src="../js/script.js"></script>
+    <?php  include 'scriptingfiles.php';  ?>
 </body>
 </html>
 
