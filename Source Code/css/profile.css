@@ -365,7 +365,6 @@ aside .sidebar a:hover span {
     padding: 12px 27px;
 }
 
-
 .searchbutton input {
     padding: 2em;
 }
@@ -455,13 +454,18 @@ aside .sidebar a:hover span {
 }
 
 #modal4 .modal-content {
-    width: 70%;
+    width: 75%;
 }
 
 #modal4 .modal-header {
     padding: 1em;
     display: flex;
     gap: 20em;
+}
+
+#modal5 .modal-header {
+    padding: 1em;
+    gap: 1em;
 }
 
 #modal3 {
@@ -471,9 +475,6 @@ aside .sidebar a:hover span {
 #modal3 .modal-content {
     width: 45%;
 }
-
-
-
 
 #modal3 .modal-body {
     padding: 2em;

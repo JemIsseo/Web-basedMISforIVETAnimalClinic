@@ -298,7 +298,7 @@ if(isset($_POST['updateprofile'])){
                                     $proid=$row['profileid'];
                                     $pname=$row['petname'];
                                     $age=$row['age'];
-                                    $utsex=$row['sex']; 
+                                    $sex=$row['sex']; 
                                     $weight=$row['weight'];
                                     $owner=$row['owner'];
                                     $phone=$row['phone'];
@@ -307,13 +307,13 @@ if(isset($_POST['updateprofile'])){
                                     <td>'.$proid.'</td>
                                     <td>'.$pname.'</td>
                                     <td>'.$age.'</td>
-                                    <td>'.$utsex.'</td>
+                                    <td>'.$sex.'</td>
                                     <td>'.$weight.'</td>
                                     <td>'.$owner.'</td>
                                     <td>'.$phone.'</td>
                                     <td>'.$email.'</td>
                                     <td>
-                                    <button class="modal-open viewRestoreProfile" data-modal="modal5">
+                                    <button class="modal-open viewRestoreProfile" data-modal="modal5" value="'.$proid.'" >
                                         <span class="material-symbols-sharp restore" title="Unarchiving">unarchive</span>
                                     </button> 
                                     </td>
@@ -342,17 +342,16 @@ if(isset($_POST['updateprofile'])){
                 <div class="modal-header"><h1>Unarchive Profile</h1>
                     <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
                 </div>
-                <div class="modal-body" id="restoreProfile">
-                   
+                <div class="modal-body" id="restoreProfile">     
                 </div>
             </div>
-        </div>
+    </div>
 
     <script src="../js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
-    <script >
+    <script>
         $(document).ready(function() {
             $(".showUpdateProfile").click(function() {
                 var updateid = this.value;
@@ -368,15 +367,13 @@ if(isset($_POST['updateprofile'])){
                 })
                 // reload();
             })
-            $(".showRestoreProfile").click(function() {
+            $(".viewRestoreProfile").click(function() {
                 var restoreid = this.value;
                 $("#restoreProfile").load("submit.php", {
                     restoreID: restoreid
                 })
                 // reload();
             })
-
-
         })
     </script>
 </body>

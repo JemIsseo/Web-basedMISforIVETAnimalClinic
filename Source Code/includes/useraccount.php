@@ -2,6 +2,8 @@
 <?php 
     include 'connect.php';
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -38,8 +40,8 @@
                                     <th>Password</th>
                                     <th>Usertype</th>
                                     <th>Loginname</th>
-                                    <th>User Image</th>
-                                    <th>         </th>
+                                    <th>Image</th>
+                                    <th>       </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,10 +70,10 @@
                 <h1>Create An Account</h1>
                 <div class="accountrecordsbg">
                     <div class="accountrecords ">
-                        <form action="" method="POST" enctype="multipart/form-data" >
+                        <form action="submit.php" method="POST" enctype="multipart/form-data" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>
-                                <input type="file" name="image" title="Insert photo...">
+                                <input type="file" name="my_image" title="Insert photo...">
                             </div> 
                             <div class="formprofile">
                             <div> 
@@ -87,7 +89,7 @@
                                 <span>Confirm Password</span>
                             </div>
                             <div> 
-                                <input type="text" name="ut" placeholder="Choose..." list="ut" autocomplete="off" required>
+                                <input type="text" name="ut" placeholder="Choose..." list="ut" autocomplete="off" >
                                 <datalist id="ut">
                                 <option value="IT Expert"></option>   
                                 <option value="Admin"></option>
