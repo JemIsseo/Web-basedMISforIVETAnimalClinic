@@ -2,8 +2,38 @@
 <?php 
     include 'connect.php';
 
+    if (isset($_POST['saveaccount'])  && isset($_FILES['my_image']))  {
+        $un = $_POST['username'];
+        $pw = $_POST['password'];
+        $ut = $_POST['ut'];
+        $ln = $_POST['loginname'];
 
+        $img_name = $_FILES['my_image']['name'];
+        $img_size = $_FILES['my_image']['size'];
+        $tmp_name = $_FILES['my_image']['tmp_name'];
+      
+                $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+                $img_ex_lc = strtolower($img_ex);
 
+                $allowed_exs = array("jpg", "jpeg", "png");
+
+                if (in_array($img_ex_lc, $allowed_exs)) {
+                    $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
+                    $img_upload_path = 'uploads/'.$new_img_name;
+                    move_uploaded_file($tmp_name,  $img_upload_path);
+
+                    // Insert into database
+                    $sql = "insert into tbluseraccount(username,password,usertype,loginname,image) 
+                    values('$un','$pw','$ut','$ln','$new_img_name')";
+                    $res = mysqli_query($conn, $sql);
+                    if ($res) { ?>
+                        <div class="statusmessagesuccess" id="close">
+                            <h2>Account Added Successfully!</h2>
+                            <button button class="icon"><span class="material-symbols-sharp">close</span></button>
+                        </div>       
+                 <?php   }
+                } 
+            }
 ?>
 
 <!DOCTYPE html>
@@ -45,21 +75,37 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>admin</td>
-                                    <td>***</td>
-                                    <td>Administrator</td>
-                                    <td>admin123</td>
+                            <?php 
+                                    $sql = "Select * from tbluseraccount";
+                                    $res= mysqli_query($conn,$sql);
+
+                                    if($res){
+                                    while($row=mysqli_fetch_assoc($res)){
+                                    $un=$row['username'];
+                                    $pw=$row['password'];
+                                    $ut=$row['usertype'];
+                                    $ln=$row['loginname']; 
+                                    $new_img_name=$row['image'];
+                     ?>  
+                                    <tr>
+                                    <td><?php echo $un; ?></td>
+                                    <td><?php echo $pw; ?></td>
+                                    <td><?php echo $ut; ?></td>
+                                    <td><?php echo $ln; ?></td>
                                     <td>
-                                        <div class="profile-photo">
-                                            <button class="modal-open" data-modal="modal0"><img src="../images/profile-2.png" alt="User Photo"></button>
-                                        </div>
+                                    <div class="profile-photo">
+                                            <img src="uploads/<?php echo $new_img_name?>">
+                                    </div>
                                     </td>
                                     <td>
-                                    <button name="savechanges" class="modal-open" data-modal="modal1"><span class="material-symbols-sharp edit" title="Edit this account">edit</span></button>
-                                    <button name="archiveaccount" class="modal-open" data-modal="modal2"><span class="material-symbols-sharp archive" title="Archive this record">archive</span></button> 
-                                    </td> 
-                                </tr>
+                                        <button class="modal-open showUpdateProfile" data-modal="modal1" value="'.$un.'" ><span class="material-symbols-sharp edit" title="Edit this profile">edit</span></button>
+                                        <button class="modal-open showArchiveProfile" data-modal="modal2" value="'.$un.'"><span class="material-symbols-sharp archive" title="Archive the record">archive</span></button>
+                                    </td>
+                                    </tr>
+                    <?php
+                               }
+                            } 
+                    ?>
                             </tbody>
                         </table>
                     </div>
@@ -70,7 +116,7 @@
                 <h1>Create An Account</h1>
                 <div class="accountrecordsbg">
                     <div class="accountrecords ">
-                        <form action="submit.php" method="POST" enctype="multipart/form-data" >
+                        <form action="" method="POST" enctype="multipart/form-data" >
                             <div class="profilepicture">
                                 <span class="material-symbols-sharp">account_circle</span><br><br>
                                 <input type="file" name="my_image" title="Insert photo...">
@@ -108,7 +154,7 @@
                         </form>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <!--  End of Create Profile  -->
         </main>
         <!--  End of Main Tag  -->
@@ -123,22 +169,6 @@
         </div>
         <!-- Start of Modal --> 
         <!-- Modal of Edit Account -->
-        <div class="modal" id="modal0">
-            <div class="modal-content">
-                <div class="modal-header"><h1>Account Photo</h1>
-                    <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../images/profile-2.png" alt="Account Photo">
-                </div>
-                    <div class="modal-footer">
-                        <div class="buttonflex">
-                            <button type="submit" class="cancel modal-close">Exit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="modal" id="modal1">
             <div class="modal-content">
                 <div class="modal-header"><h1>Edit Account</h1>
@@ -299,7 +329,7 @@
             
     </div>
 
-    <script src="../JS/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
 

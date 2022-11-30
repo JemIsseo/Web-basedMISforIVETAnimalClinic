@@ -398,7 +398,7 @@
 
     </div>
 
-    <script src="../JS/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
 

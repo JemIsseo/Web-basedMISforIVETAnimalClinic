@@ -250,9 +250,6 @@ aside .sidebar a:hover span {
     margin-left: 1rem;
 }
 /*  Start of Main  */
-main {
-    margin-top: 1rem;
-}
 /*  Section Account Records  */
 .tableaccountrecords {
     margin-top: 1em;
@@ -296,6 +293,25 @@ main {
     font-weight: bold;
     text-align: center;
 }
+
+/* 
+ Status Message */
+ .statusmessagesuccess {
+    background-color: #96f5b6;
+    margin: .5em;
+    border-radius: 5px;
+    display: flex;
+    padding: 1em;
+    gap: 33em;
+    position: absolute;
+    justify-content: right;
+    margin-left: 21em;
+}
+
+.statusmessagesuccess button {
+    background: transparent;
+}
+
 
 ::placeholder {
     text-align: center;
