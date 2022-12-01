@@ -273,7 +273,7 @@ if(isset($_POST['updateprofile'])){
                 </div>  
             </div>
 </div>
-   
+
  <!-- Modal of Restore Profile -->
     <div class="modal" id="modal4">
             <div class="modal-content" >  
