@@ -1,7 +1,7 @@
 
 <?php 
     include 'connect.php';
-
+    
     if (isset($_POST['saveaccount'])  && isset($_FILES['my_image']))  {
         $un = $_POST['username'];
         $pw = $_POST['password'];
@@ -59,21 +59,21 @@ if(isset($_POST['updateaccount']) && isset($_FILES['image']) ){
 
                 $sql = "update tbluseraccount set username ='$un',password ='$pw', 
                         usertype='$ut',emailaddress ='$ea', image='$img' 
-                        where username= '$un'";
+                        where username= '$un";
                 $res = mysqli_query($conn,$sql);
-    if($res) {?>  
-        <div class="statusmessagesuccess" id="close">
-            <h2>Account Updated Successfully!</h2>
-            <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
-        </div>
+                if($res) {?>  
+                    <div class="statusmessagesuccess" id="close">
+                        <h2>Account Updated Successfully!</h2>
+                        <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                    </div>
         
     <?php  
-    } 
-    else {
-        die(mysqli_error($conn));
-    }
-}
-}
+                } else {
+                    die(mysqli_error($conn));
+                } 
+            }
+           
+            }
 
 
 
