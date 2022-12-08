@@ -60,9 +60,6 @@
                                 <svg>
                                     <circle cx='38' cy='38' r='36' ></circle>
                                 </svg>
-                                <div class="number">
-                                    <p>79%</p>
-                                </div>
                             </div>
                         </div>
                         <small class="text-muted">Last 30 Days</small>
@@ -79,9 +76,6 @@
                                 <svg>
                                     <circle cx='38' cy='38' r='36' ></circle>
                                 </svg>
-                                <div class="number">
-                                    <p>95%</p>
-                                </div>
                             </div>
                         </div>
                         <small class="text-muted">Last 30 Days</small>
@@ -98,9 +92,6 @@
                                 <svg>
                                     <circle cx='38' cy='38' r='36' ></circle>
                                 </svg>
-                                <div class="number">
-                                    <p>69%</p>
-                                </div>
                             </div>
                         </div>
                         <small class="text-muted">Last 30 Days</small>

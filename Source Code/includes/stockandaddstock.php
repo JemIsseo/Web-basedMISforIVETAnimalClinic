@@ -78,9 +78,9 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Item Name</td>
-                                    <td>Category</td>
-                                    <td>rawdwadwadwawawaadwadwaadwadwawawawawadwadwaiption</td>
+                                    <td>Immunol</td>
+                                    <td>Medicine</td>
+                                    <td>Immunol syrup is clinically proven an immunomodulator / immunostimulant and phagocytosis enhancer for dogs and cats to enhance immunity and fights pathogens.</td>
                                     <td>150</th>
                                     <td>
                                     <button class="modal-open" name="savechanges" data-modal="modal1" title="Edit this record"><span class="material-symbols-sharp edit" >edit</span></button>
@@ -89,9 +89,9 @@
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>Item Name</th>
-                                    <td>Category</td>
-                                    <td>Description</td>
+                                    <td>Pedigree</th>
+                                    <td>Food</td>
+                                    <td>Nutritionally balanced food helps ensure your dog can live their happiest and healthiest life.</td>
                                     <td>244</td>
                                      <td>
                                     <button class="modal-open" name="savechanges" data-modal="modal1"><span class="material-symbols-sharp edit">edit</span></button>
@@ -109,7 +109,7 @@
         <!--  Start of Retrive section  -->
         <div class="rightbottom">
         <h3>View, Restore and Refresh Stock</h3>
-        <div class="buttons">
+        
             <div class="buttonmodify">
                 <button class="modal-open" data-modal="modal5" title="View Stocks"><span class="material-symbols-sharp">inventory_2</span>View Stocks</button> 
             </div> 
@@ -119,7 +119,6 @@
             <div class="buttonmodify">
                 <button title="Refresh stock"><span class="material-symbols-sharp">refresh</span>Refresh Stocks</button> 
             </div>
-        </div>
         </div>
         
         <!-- Start of Modal --> 

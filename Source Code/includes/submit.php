@@ -132,6 +132,7 @@
     }
 ?> 
 <?php      
+    //  restore statement in profile 
     if (isset($_POST['restoreID'])) {     
         $restoreID = $_POST['restoreID'];
         $sql = "Select * from tblarcprofile where profileid =$restoreID";
@@ -191,7 +192,7 @@
                     </form> 
 <?php 
        }
-
+       // update statement form in useraccount
        if (isset($_POST['accountID'])) {     
         $accountID = $_POST['accountID'];
         $sql = "Select * from tbluseraccount where username ='$accountID'";
@@ -208,13 +209,18 @@
         <section class="tableaccountrecords">
                 <div class="accountrecordsbg">
                     <div class="accountrecords ">
-                        <form action="useraccount.php" method="POST" enctype="multipart/form-data" >
+                        <form action="" method="POST" enctype="multipart/form-data" >
                             <div class="profilepicture">
+                            <input name="username" placeholder="Enter Username" value="<?= $un;  ?>" type="hidden">
+                            
                             <div class="updatephoto">
                                 <img src="uploads/<?php echo $img;?>">
                             </div>                                         
                             <input type="file" name="image" title="Insert photo..." value=" <?= $img; ?> ">
-                            </div>  
+                            <button name="updatephoto" type="submit" class="uploadbtn" title="Upload Photo">Upload</button>
+                            </div> 
+                        </form> 
+                        <form action="useraccount.php" method="POST">
                             <div class="formprofile">
                             <div> 
                                 <input type="text" name="username" placeholder="Enter Username" value="<?= $un;  ?>" readonly>

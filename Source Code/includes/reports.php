@@ -40,7 +40,7 @@
         <!--  Start of Retrive section  -->
         <h1>Refresh Table</h1>
     
-        <div class="buttons">
+       
             <div class="buttonmodify">
                 <button class="modal-open" data-modal="modal5" title="View Stocks"><span class="material-symbols-sharp">person_search</span>User Account</button> 
             </div> 
@@ -50,7 +50,6 @@
             <div class="buttonmodify">
                 <button title="Refresh stock"><span class="material-symbols-sharp">shopping_cart</span>Products and Services</button> 
             </div>
-        </div>
         
         
     </div>

@@ -37,46 +37,59 @@
 
 
              // account update statement 
-if(isset($_POST['updateaccount']) && isset($_FILES['image']) ){
-    $un = $_POST['username'];
-    $pw = $_POST['password'];
-    $ut = $_POST['ut'];
-    $ea = $_POST['emailaddress'];
+             if(isset($_POST['updateaccount'])){
+                $un = $_POST['username'];
+                $pw = $_POST['password'];
+                $ut = $_POST['ut'];
+                $ea = $_POST['emailaddress'];
+   
+                $sql = "update tbluseraccount set password ='$pw', 
+                usertype='$ut',emailaddress ='$ea' where username= '$un'";
+           $res = mysqli_query($conn,$sql);
+           if($res) {?>  
+               <div class="statusmessagesuccess" id="close">
+                   <h2>Account Updated Successfully!</h2>
+                   <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+               </div>
 
-    $img_name = $_FILES['image']['name'];
-    $img_size = $_FILES['image']['size'];
-    $tmp_name = $_FILES['image']['tmp_name'];
+<?php  
+           } else {
+               die(mysqli_error($conn));
+           } 
+       }
+
+            if(isset($_POST['updatephoto']) && isset($_FILES['image']) ){
+                $un = $_POST['username'];
+                
+                $img_name = $_FILES['image']['name'];
+                $img_size = $_FILES['image']['size'];
+                $tmp_name = $_FILES['image']['tmp_name'];
   
-            $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-            $img_ex_lc = strtolower($img_ex);
+                    $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+                    $img_ex_lc = strtolower($img_ex);
 
-            $allowed_exs = array("jpg", "jpeg", "png");
+                    $allowed_exs = array("jpg", "jpeg", "png");
 
-            if (in_array($img_ex_lc, $allowed_exs)) {
-                $img = uniqid("IMG-", true).'.'.$img_ex_lc;
-                $img_upload_path = 'uploads/'.$img;
-                move_uploaded_file($tmp_name,  $img_upload_path);
+                    if (in_array($img_ex_lc, $allowed_exs)) {
+                        $img = uniqid("IMG-", true).'.'.$img_ex_lc;
+                        $img_upload_path = 'uploads/'.$img;
+                        move_uploaded_file($tmp_name,  $img_upload_path);
 
-                $sql = "update tbluseraccount set username ='$un',password ='$pw', 
-                        usertype='$ut',emailaddress ='$ea', image='$img' 
-                        where username= '$un";
-                $res = mysqli_query($conn,$sql);
-                if($res) {?>  
-                    <div class="statusmessagesuccess" id="close">
-                        <h2>Account Updated Successfully!</h2>
-                        <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
-                    </div>
-        
-    <?php  
-                } else {
-                    die(mysqli_error($conn));
-                } 
-            }
-           
-            }
+                        $sql = "update tbluseraccount set image='$img' where username= '$un'";
+                        $res = mysqli_query($conn,$sql);
+                        if($res) {?>  
+                            <div class="statusmessagesuccess" id="close">
+                                <h2>Profile Image Changed</h2>
+                                <button class="icon modal-close"><span class="material-symbols-sharp">close</span></button>
+                            </div>
+             
+             <?php  
+                        } else {
+                            die(mysqli_error($conn));
+                        } 
+                    }
 
-
-
+                }
 ?>
 
 <!DOCTYPE html>
@@ -206,11 +219,11 @@ if(isset($_POST['updateaccount']) && isset($_FILES['image']) ){
         <?php  include 'systemaccountanddate.php'; ?>
         <!--  Start of Retrieve section  -->
         <h1>Retrieve Account</h1>
-        <div class="buttons">
+        
             <div class="buttonmodify">
                 <button class="modal-open" data-modal="modal4" title="View and Restore Account"><span class="material-symbols-sharp">table_view</span>View Archive</button> 
             </div>
-        </div>
+
         <!-- Start of Modal --> 
         <!-- Modal of Edit Account -->
         <div class="modal" id="modal1">
